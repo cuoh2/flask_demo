@@ -1,0 +1,118 @@
+{% from 'macros.html' import follow_area with context %}
+
+<div class="card" id="user-card">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="border-bottom: solid 1px #ccc;padding-top: 6px;padding-bottom: 6px;">
+            <img src="{{ url_for('static',filename='img/flat_compose.png') }}" width="32" height="32" />
+            <a href="{{ url_for('web.new_post') }}" style="padding-top: 4px; padding-left: 8px;">发表新帖</a>
+            </li>
+
+            <li class="list-group-item" style="border-bottom: solid 1px #ccc;padding-bottom: 0px;">
+            <div class="row">
+                <div class="col-8">
+                    <a href="{{ url_for('web.user',username=user.username) }}">
+                        <img class="rounded" src="{{ url_for('web.get_avatar',filename=user.avatar_s)}}"
+                             height="48px" width="48px" />
+                    </a>
+                        <strong><a href="{{ url_for('web.user',username=user.username) }}"> {{ user.username }}</a></strong>
+                    </div>
+                    <div class="col-4">
+                        {% if current_user == user %}
+                        <a href="{{ url_for('web.edit_profile',user_id=current_user.id) }}">账号设置</a>
+                        {% else %}
+                        {{ follow_area(user) }}
+                        {% endif %}
+                    </div>
+            </div>
+
+            <div class="row" style="padding-top: 8px; font-size: 15px;">
+                <div class="col-4" style="border-right: solid 1px #ccc;padding-bottom: 4px;">
+                    <a href="{{ url_for('web.user',username=user.username) }}">
+                    <p class="text-center" style="color: #385f8a;">{{ user.posts.count() }}</p></a>
+                    <p class="text-center" style="color: #cccccc;">动态</p>
+                </div>
+                <div class="col-4" style="border-right: solid 1px #ccc;padding-bottom: 4px;">
+                    <a href="{{ url_for('web.show_followings',user_id=user.id) }}" >
+                    <p class="text-center" style="color: #385f8a;">
+                        {% if user.following.count()-1 >0 %}
+                            {{ user.following.count()-1 }}
+                        {% else %}
+                            {{ 0 }}
+                        {% endif %}
+                    </p></a>
+                    <p class="text-center" style="color: #cccccc;">关注</p>
+
+                </div>
+                <div class="col-4">
+                    <a href="{{ url_for('web.show_fans',user_id=user.id) }}" >
+                    <p class="text-center" style="color: #385f8a;">
+                        {% if user.followers.count()-1 >0 %}
+                            {{ user.followers.count()-1 }}
+                        {% else %}
+                            {{ 0 }}
+                        {% endif %}
+                    </p> </a>
+                    <p class="text-center" style="color: #cccccc;">被关注</p>
+                </div>
+            </div>
+        </li>
+
+        {% if current_user == user%}
+
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-6" style="padding-top: 6px;">
+                    <a href="#">0条未读提醒</a>
+                </div>
+                <div class="col-6">
+                    <p class="text-right"> <a href="#" id="money"> 00 <img src="{{ url_for('static',filename='img/silver@2x.png') }}" height="16" width="16" /> 00 <img src="{{ url_for('static',filename='img/bronze@2x.png') }}" height="16" width="16" /> </a></p>
+                </div>
+            </div>
+        </li>
+        {% endif %}
+
+            <li class="list-group-item">
+            <div class="row">
+                <div  class="col-12" style="font-size: 13px;" >
+                    简介：{{ user.bio or'暂无' }}
+                </div>
+
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-6" style="font-size: 13px;" >
+                    城市：
+                </div>
+                <div class="col-6">
+                    <p class="text-right" style="font-size: 13px;">{{ user.location or'未设置' }}</p>
+                </div>
+
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-6" style="font-size: 13px;" >
+                    注册日期
+                </div>
+                <div class="col-6">
+                    <p class="text-right" style="font-size: 13px;">{{ moment( user.member_since ).format('LL') }}</p>
+                </div>
+            </div>
+        </li>
+
+    {% if not current_user.is_authenticated %}
+        <li class="list-group-item">
+            <strong>V2EX = way to explore<br /></strong>
+            <p>这只是一个仿站</p>
+        </li>
+        <li class="list-group-item">
+            <div class="mx-auto" style="width: 120px;">
+            <button type="button" class="btn btn-sm" style="margin-left: 8px"><a href="{{ url_for('web.register') }}">现在注册</a> </button>
+            <p>已有账户？<a href="{{ url_for('web.login') }}">登录</a> </p>
+            </div>
+        </li>
+    {% endif %}
+
+    </ul>
+</div>

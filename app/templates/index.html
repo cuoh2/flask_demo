@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% from 'bootstrap/nav.html' import render_nav_item %}
+
+{% block left_main %}
+<div class="card">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <ul class="nav" id="post-type">
+
+                <li class="nav-item">
+                  <a href="{{ url_for('web.index',tag='all') }}"
+                       class="btn btn-{% if tag=='all' %}dark{% else %}light{% endif %} btn-sm"
+                       tabindex="-1" role="button" style="margin-right: 10px;
+                            {% if tag=='all' %}color: #ffffff !important;{% endif %}">全部</a>
+                 </li>
+
+                <li class="nav-item">
+                  <a href="{{ url_for('web.index',tag='hot') }}"
+                       class="btn btn-{% if tag=='hot' %}dark{% else %}light{% endif %} btn-sm"
+                       tabindex="-1" role="button" style="margin-right: 10px;
+                            {% if tag=='hot' %}color: #ffffff !important;{% endif %}">最热</a>
+                  </li>
+             {% for t in tags %}
+                  <li class="nav-item">
+                    <a href="{{ url_for('web.index',tag=t.name) }}"
+                       class="btn btn-{% if t.name==tag %}dark{% else %}light{% endif %} btn-sm"
+                       tabindex="-1" role="button" style="margin-right: 10px;
+                            {% if t.name==tag %}color: #ffffff !important;{% endif %}">{{ t.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
+        <li class="list-group-item" id="node-nav">
+            <ul class="nav" id="node">
+
+            </ul>
+        </li>
+        {% for p in posts %}
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-1"><a href="{{ url_for('web.user',username=p.author.username) }}">
+                    <img src="{{ url_for('web.get_avatar',filename=p.author.avatar_s) }}" height="48px" width="48px"
+                         class="rounded" /></a>  </div>
+                <div class="col-10">
+                    <span class="post-title"><a href="{{ url_for('web.post',id=p.id) }}" id="post-title">{{ p.title or p.content }}</a></span><br />
+                    <span class="post-info">
+                        <strong style="color:#4d5256;"><a href="{{ url_for('web.user',username=p.author.username) }}"> {{ p.author.username }}</a></strong>
+                        &nbsp • &nbsp<script>document.write(moment("{{ p.publish_time }}").fromNow());</script>
+                        {% if p.comments.count() > 0 %}
+                        &nbsp • &nbsp最后回复来自 <a href="{{ url_for('web.user',username=p.comments.all()[-1].author.username) }}"> {{ p.comments.all()[-1].author.username }}</a>
+                        {% endif %}
+                    </span>
+                </div>
+                <div class="col-1"><span class="badge badge-pill badge-info">{{ p.comments.count() }}</span></div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="card-footer">
+        更多新主题
+    </div>
+</div>
+{% endblock %}
+
+{% block right_main %}
+    {% if current_user.is_authenticated %}
+    {% include 'right_user_card.html' %}
+    {% endif %}
+    {% include 'star_node.html' %}
+    {% include 'right_hot_post.html' %}
+{% endblock %}

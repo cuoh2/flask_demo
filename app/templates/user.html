@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{#{% import "bootstrap/wtf.html" as wtf %}#}
+
+{% block title %}
+—— {{ user.username }}
+{% endblock %}
+
+{% block left_main %}
+<div class="card" id="register-card">
+{#        <div class="col-2">#}
+{#            <img class="rounded" src="{{ url_for('web.get_avatar',filename=user.avatar_s) }}" width="80" height="80" />#}
+{#        </div>#}
+{#        <div class="col-10">#}
+{#            <p style="font-size: 24px;color: #000">{{ user.username }}</p>#}
+{#            <p style="color: #999">V2EX第{{ user.id }}号会员</p>#}
+{#        </div>#}
+
+
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <ul class="nav" id="post-type">
+
+                <li class="nav-item">
+                  <a href="{{ url_for('web.user',username=user.username,tag='all') }}"
+                       class="btn btn-{% if tag=='all' %}dark{% else %}light{% endif %} btn-sm"
+                       tabindex="-1" role="button" style="margin-right: 10px;
+                            {% if tag=='all' %}color: #ffffff !important;{% endif %}">TA的全部帖子</a>
+                 </li>
+
+             {% for t in tags %}
+                  <li class="nav-item">
+                    <a href="{{ url_for('web.user',username=user.username,tag=t.name) }}"
+                       class="btn btn-{% if t.name==tag %}dark{% else %}light{% endif %} btn-sm"
+                       tabindex="-1" role="button" style="margin-right: 10px;
+                            {% if t.name==tag %}color: #ffffff !important;{% endif %}">{{ t.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
+        <li class="list-group-item" id="node-nav">
+            <ul class="nav" id="node">
+
+            </ul>
+        </li>
+
+
+    {% if posts %}
+        {% for p in posts %}
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-10">
+                    <span class="post-title"><a href="{{ url_for('web.post',id=p.id) }}" id="post-title">{{ p.title or p.content }}</a></span><br />
+                    <span class="post-info">
+                        <strong style="color:#4d5256;"><a href="{{ url_for('web.user',username=p.author.username) }}"> {{ p.author.username }}</a></strong>
+                        &nbsp • &nbsp<script>document.write(moment("{{ p.publish_time }}").fromNow());</script>
+                        {% if p.comments.count() > 0 %}
+                        &nbsp • &nbsp最后回复来自 <a href="{{ url_for('web.user',username=p.comments.all()[-1].author.username) }}"> {{ p.comments.all()[-1].author.username }}</a>
+                        {% endif %}
+                    </span>
+                </div>
+                <div class="col-1">
+                </div>
+                <div class="col-1"><span class="badge badge-pill badge-info">
+                    {{ p.comments.count() }}</span></div>
+            </div>
+        </li>
+        {% endfor %}
+         <div class="card-footer">
+             已无更多
+        </div>
+    </ul>
+    {% else %}
+    <div class="card-footer">
+        暂无内容
+    </div>
+    {% endif %}
+
+</div>
+{% endblock %}
+
+{% block right_main %}
+     {% include 'right_user_card.html' %}
+{% endblock %}

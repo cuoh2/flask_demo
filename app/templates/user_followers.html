@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% from 'macros.html' import user_card with context %}
+
+{% block title %}
+—— {{ user.username }}
+{% endblock %}
+
+{% block left_main %}
+<div class="card" id="register-card">
+    <div class="card-body">
+     <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            {{ user.followers.count()-1  }}人关注了TA：
+        </li>
+
+    </ul>
+        <div class="row">
+        <br/>
+         {% if friends|length >= 1 %}
+             {% for f in friends %}
+                    <div class="col-md-3">
+                             {{ user_card(user=f) }}
+                        <hr>
+                    </div>
+             {% endfor %}
+            {% endif %}
+         </div>
+
+    </div>
+</div>
+{% endblock %}
+
+{% block right_main %}
+     {% include 'right_user_card.html' %}
+{% endblock %}

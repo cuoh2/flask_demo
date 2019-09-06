@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+{% block left_main %}
+<div class="card">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-10">
+                    <p style="margin-bottom: 10px"><a href="/">V2EX</a> › <a href="">{{ post.tag.name }}</a></p>
+                    <h1 style="font-size: 24px;">{{ post.title }}</h1>
+                    <p style="color: #999;margin-bottom: 0px;font-size: smaller"><a href="{{ url_for('web.user',username=post.author.username) }}"> {{ post.author.username }}</a> · <script>document.write(moment("{{ post.publish_time }}").fromNow());</script> · {{ post.chick }} 次点击</p>
+                </div>
+                <div class="col-1" style="margin-left: 30px">
+                        <a href="{{ url_for('web.user',username=post.author.username) }}"> <img class="rounded" src="{{ url_for('web.get_avatar',filename=post.author.avatar_s) }}" width="73" height="73" /></a>
+                </div>
+            </div>
+        </li>
+        <div class="card-body" id="post-content">
+            <div class="markdown-body" style="font-size: 14px;">
+                {{ post.content|safe }}
+            </div>
+        </div>
+        <div class="card-body" id="post-foot">
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="collect" data-catid="{{ post.id }}">{% if post.collection(current_user) %}取消收藏{% else %}加入收藏{% endif %}</button>
+            {% if post.author == current_user %}
+            <button type="button" class="btn btn-outline-secondary btn-sm">
+                <a href="{{ url_for('web.edit_post',post_id=post.id) }}">增加内容</a></button>
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="delete" data-catid="{{ post.id }}">删除</button>
+            {% endif %}
+
+            <button type="button" class="btn btn-outline-secondary btn-sm float-right">忽略主题</button>
+        </div>
+    </ul>
+</div>
+
+{% if post.comments.count() != 0 %}
+<div class="card">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item" style="font-size: 14px;color: #999;">
+            <p>{{ post.comments.count() }} 回复&nbsp |&nbsp 最后回复时间 {{ last_comment.publish_time }}</p>
+        </li>
+        {% for c in comments %}
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-1"><a href="{{ url_for('web.user',username=c.author.username) }}"><img src="{{ url_for('web.get_avatar',filename=c.author.avatar_s) }}" height="48px" width="48px" class="rounded"></a></div>
+                <div class="col-10">
+                    <span class="post-info">
+                        <strong style="color:#4d5256;"><a href="{{ url_for('web.user',username=c.author.username) }}"> {{ c.author.username }}</a></strong>
+                        &nbsp • &nbsp<script>document.write(moment("{{ c.publish_time }}").fromNow());</script>
+                    </span>
+                    <br />
+                    <span style="font-size: 14px">{{ c.content|safe }}</span>
+                </div>
+                <div class="col-1">
+                    <a href="#comment-content" onclick="document.getElementById('comment-content').value='@ {{ c.author.username }} ';"><img src="{{ url_for('static',filename='img/reply.png') }}" /></a>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% else %}
+<div class="card" id="no-comment">
+    <p class="text-center" style="margin-top: 8px;margin-bottom: 8px;">目前尚无回复</p>
+</div>
+{% endif %}
+
+<div class="card">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <p style="font-size: 14px;margin-bottom: 0px">添加一条新回复</p>
+        </li>
+        <li class="list-group-item">
+            <div class="form-group" style="margin-bottom: 0px">
+                <form method="post" action="{{ url_for('web.new_comment',id=post.id) }}">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    <textarea class="form-control" rows="3" style="margin-bottom: 8px;font-size: 14px;" id="comment-content" name="comment-content"></textarea>
+                    <button type="submit" class="btn btn-primary btn-sm float-right">回复</button>
+                </form>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <p class="text-left"><a href="/">← 返回</a> </p>
+        </li>
+    </ul>
+</div>
+    <script>
+    $('#collect').click(function () {
+        var post_id = $(this).attr("data-catid");
+        var data = {'post_id':post_id,};
+        $.ajax({
+            type:"GET",
+            url:"{{url_for('web.collect_post')}}",
+            data:data,
+            dataType: "json",
+            cache:false,
+            success: function(res) {
+                $('#collect').html(res['res']);
+            },
+            error: function(xhr, type) {
+                window.location.href="{{ url_for('web.login') }}";
+
+            }
+        });
+    });
+
+
+
+    $('#delete').click(function () {
+        alert('确认删除吗？');
+        var post_id = $(this).attr("data-catid");
+        var data = {'post_id':post_id,
+                    'csrf_token': '{{csrf_token()}}',
+           };
+        $.ajax({
+            type:"POST",
+            url:"{{url_for('web.delete_post')}}",
+            data:data,
+            dataType: "json",
+            success: function() {
+                window.location.href="{{ url_for('web.index') }}";
+            },
+            error: function(xhr, type) {
+            }
+        });
+    });
+    </script>
+
+
+{% endblock %}
+
+{% block right_main %}
+    {% if current_user.is_authenticated %}
+    {% include 'right_user_card.html' %}
+    {% endif %}
+{% endblock %}
