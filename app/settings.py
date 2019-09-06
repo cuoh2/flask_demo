@@ -55,7 +55,7 @@ class BaseConfig(object):
     MAIL_USE_SSL=True
     MAIL_USE_TSL=False
     MAIL_USERNAME='517584811@qq.com'
-    MAIL_PASSWORD='kaercocatidebhfh'
+    MAIL_PASSWORD='*************'
     MAIL_DEFAULT_SENDER ='517584811@qq.com'
 
 class DevelopmentConfig(BaseConfig):
