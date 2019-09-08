@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {#{% import "bootstrap/wtf.html" as wtf %}#}
+{% from 'bootstrap/pagination.html' import render_pager %}
 
 {% block title %}
 —— {{ user.username }}
@@ -21,11 +22,14 @@
             <ul class="nav" id="post-type">
 
                 <li class="nav-item">
-                  <a href="{{ url_for('web.user',username=user.username,tag='all') }}"
+
+                    <a href="{{ url_for('web.user',username=user.username,tag='all') }}"
                        class="btn btn-{% if tag=='all' %}dark{% else %}light{% endif %} btn-sm"
                        tabindex="-1" role="button" style="margin-right: 10px;
-                            {% if tag=='all' %}color: #ffffff !important;{% endif %}">TA的全部帖子</a>
-                 </li>
+                            {% if tag=='all' %}color: #ffffff !important;{% endif %}">
+                        {% if current_user == user%}我的全部帖子{% else %}TA的全部帖子{% endif %}</a>
+
+                </li>
 
              {% for t in tags %}
                   <li class="nav-item">
@@ -51,22 +55,33 @@
                 <div class="col-10">
                     <span class="post-title"><a href="{{ url_for('web.post',id=p.id) }}" id="post-title">{{ p.title or p.content }}</a></span><br />
                     <span class="post-info">
-                        <strong style="color:#4d5256;"><a href="{{ url_for('web.user',username=p.author.username) }}"> {{ p.author.username }}</a></strong>
+
                         &nbsp • &nbsp<script>document.write(moment("{{ p.publish_time }}").fromNow());</script>
                         {% if p.comments.count() > 0 %}
-                        &nbsp • &nbsp最后回复来自 <a href="{{ url_for('web.user',username=p.comments.all()[-1].author.username) }}"> {{ p.comments.all()[-1].author.username }}</a>
+                        &nbsp • &nbsp最后回复来自 <a href="{{ url_for('web.user',username=p.comments.all()[-1].author.username) }}">
+                            {{ p.comments.all()[-1].author.username }}</a>
                         {% endif %}
+                        {% if current_user==p.author %}
+                            <form action="{{ url_for('.delete_post',post_id=p.id) }}" method="post">
+                                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                            <button type="submit" onclick="return confirm('确认删除吗？');">删除</button>
+                            </form>
+                        {% endif %}
+
+
                     </span>
                 </div>
                 <div class="col-1">
                 </div>
                 <div class="col-1"><span class="badge badge-pill badge-info">
-                    {{ p.comments.count() }}</span></div>
+                    {{ p.comments.count() }}</span> </div>
             </div>
         </li>
         {% endfor %}
-         <div class="card-footer">
-             已无更多
+        <div class="card-footer">
+        {% if posts %}
+                <div class="page-footer">{{ render_pager(pagination) }}</div>
+            {% endif %}
         </div>
     </ul>
     {% else %}

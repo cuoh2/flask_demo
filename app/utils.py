@@ -39,3 +39,7 @@ def redirect_back(default='blog.index',**kwargs):
             return redirect(target)
     return redirect(url_for(default,**kwargs))
 
+ALLOWED_EXTENSIONS=['png','jpg','jpeg','gif']
+
+def is_allowed_type(filename):
+    return '.' in filename and filename.rsplit('.',1)[-1] in ALLOWED_EXTENSIONS

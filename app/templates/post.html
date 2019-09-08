@@ -8,7 +8,7 @@
                 <div class="col-10">
                     <p style="margin-bottom: 10px"><a href="/">V2EX</a> › <a href="">{{ post.tag.name }}</a></p>
                     <h1 style="font-size: 24px;">{{ post.title }}</h1>
-                    <p style="color: #999;margin-bottom: 0px;font-size: smaller"><a href="{{ url_for('web.user',username=post.author.username) }}"> {{ post.author.username }}</a> · <script>document.write(moment("{{ post.publish_time }}").fromNow());</script> · {{ post.chick }} 次点击</p>
+                    <p style="color: #999;margin-bottom: 0px;font-size: smaller"><a href="{{ url_for('web.user',username=post.author.username) }}"> {{ post.author.username }}</a> · <script>document.write(moment("{{ post.publish_time }}").fromNow());</script> · {{ post.click }} 次点击</p>
                 </div>
                 <div class="col-1" style="margin-left: 30px">
                         <a href="{{ url_for('web.user',username=post.author.username) }}"> <img class="rounded" src="{{ url_for('web.get_avatar',filename=post.author.avatar_s) }}" width="73" height="73" /></a>
@@ -21,14 +21,18 @@
             </div>
         </div>
         <div class="card-body" id="post-foot">
-            <button type="button" class="btn btn-outline-secondary btn-sm" id="collect" data-catid="{{ post.id }}">{% if post.collection(current_user) %}取消收藏{% else %}加入收藏{% endif %}</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="collect" data-catid="{{ post.id }}">{% if post.is_collection(current_user) %}取消收藏{% else %}加入收藏{% endif %}</button>
             {% if post.author == current_user %}
             <button type="button" class="btn btn-outline-secondary btn-sm">
                 <a href="{{ url_for('web.edit_post',post_id=post.id) }}">增加内容</a></button>
-            <button type="button" class="btn btn-outline-secondary btn-sm" id="delete" data-catid="{{ post.id }}">删除</button>
+{#            <button type="button" class="btn btn-outline-secondary btn-sm" id="delete" data-catid="{{ post.id }}">删除</button>#}
+                 <form action="{{ url_for('.delete_post',post_id=post.id) }}" method="post">
+                                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                            <button type="submit" onclick="return confirm('确认删除吗？');">删除</button>
+                            </form>
             {% endif %}
 
-            <button type="button" class="btn btn-outline-secondary btn-sm float-right">忽略主题</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm float-right"></button>
         </div>
     </ul>
 </div>
@@ -59,10 +63,7 @@
         {% endfor %}
     </ul>
 </div>
-{% else %}
-<div class="card" id="no-comment">
-    <p class="text-center" style="margin-top: 8px;margin-bottom: 8px;">目前尚无回复</p>
-</div>
+
 {% endif %}
 
 <div class="card">
@@ -96,6 +97,7 @@
             cache:false,
             success: function(res) {
                 $('#collect').html(res['res']);
+                $('#collect_count').html(res['count'])
             },
             error: function(xhr, type) {
                 window.location.href="{{ url_for('web.login') }}";
@@ -106,24 +108,24 @@
 
 
 
-    $('#delete').click(function () {
-        alert('确认删除吗？');
-        var post_id = $(this).attr("data-catid");
-        var data = {'post_id':post_id,
-                    'csrf_token': '{{csrf_token()}}',
-           };
-        $.ajax({
-            type:"POST",
-            url:"{{url_for('web.delete_post')}}",
-            data:data,
-            dataType: "json",
-            success: function() {
-                window.location.href="{{ url_for('web.index') }}";
-            },
-            error: function(xhr, type) {
-            }
-        });
-    });
+    {#$('#delete').click(function () {#}
+    {#    alert('确认删除吗？');#}
+    {#    var post_id = $(this).attr("data-catid");#}
+    {#    var data = {'post_id':post_id,#}
+    {#                'csrf_token': '{{csrf_token()}}',#}
+    {#       };#}
+    {#    $.ajax({#}
+    {#        type:"POST",#}
+    {#        url:"{{url_for('web.delete_post')}}",#}
+    {#        data:data,#}
+    {#        dataType: "json",#}
+    {#        success: function() {#}
+    {#            window.location.href="{{ url_for('web.index') }}";#}
+    {#        },#}
+    {#        error: function(xhr, type) {#}
+    {#        }#}
+    {#    });#}
+    {#});#}
     </script>
 
 

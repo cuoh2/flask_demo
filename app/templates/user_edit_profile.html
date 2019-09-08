@@ -1,8 +1,14 @@
 {% extends 'base.html' %}
 {#{% import "bootstrap/wtf.html" as wtf %}#}
+{% from 'bootstrap/form.html' import render_form %}
 
 {% block title %}
 —— {{ user.username }}
+{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='jcrop/css/jquery.Jcrop.min.css') }}">
 {% endblock %}
 
 {% block left_main %}
@@ -12,18 +18,18 @@
         <li class="list-group-item" style="border-bottom: 1px solid #ccc!important;margin-bottom: 0px;">
             <nav aria-label="breadcrumb" id="card-nav">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">个人信息修改</li>
+                <li class="breadcrumb-item active" aria-current="page">>>个人信息修改</li>
               </ol>
             </nav>
         </li>
         <li class="list-group-item" id="node-nav">
          <form id="register-form" method="post" action="">
-                {{ form.hidden_tag() }}
-                 {% if form and form.errors %}
-                    {% for field in form.errors %}
+                {{ form1.hidden_tag() }}
+                 {% if form1 and form1.errors %}
+                    {% for field in form1.errors %}
                     <div class="alert alert-danger alert-dismissable">
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
-                        <strong>错误:{{ form.errors[field][0] }}</strong>
+                        <strong>错误:{{ form1.errors[field][0] }}</strong>
                     </div>
                     {% endfor %}
                 {% endif %}
@@ -37,37 +43,104 @@
                 {% endfor %}
             {% endwith %}
               <div class="form-group row">
-                <label for="colFormLabelSm" class="col-2 col-form-label col-form-label text-right">{{ form.username.label }}</label>
+                <label for="colFormLabelSm" class="col-2 col-form-label col-form-label text-right">{{ form1.username.label }}</label>
                 <div class="col-10">
-                  {{ form.username() }}
+                  {{ form1.username() }}
                     <p style="margin-bottom: 0px;color: #ccc;">4-20个字符，支持中英文、数字、"_"</p>
                 </div>
               </div>
               <div class="form-group row">
-                <label for="colFormLabelSm" class="col-2 col-form-label col-form-label text-right">{{ form.location.label }}</label>
+                <label for="colFormLabelSm" class="col-2 col-form-label col-form-label text-right">{{ form1.location.label }}</label>
                 <div class="col-10">
-                  {{ form.location() }}
+                  {{ form1.location() }}
                 </div>
               </div>
               <div class="form-group row">
-                <label for="colFormLabelSm" class="col-2 col-form-label col-form-label text-right">{{ form.bio.label }}</label>
+                <label for="colFormLabelSm" class="col-2 col-form-label col-form-label text-right">{{ form1.bio.label }}</label>
                 <div class="col-10">
-                  {{ form.bio(row='100', cols='36') }}
+                  {{ form1.bio(row='100', cols='36') }}
                 </div>
               </div>
               <div class="form-group row">
                 <label for="colFormLabelSm" class="col-2 col-form-label col-form-label text-right"></label>
                 <div class="col-10" >
-                  {{ form.submit() }}
+                  {{ form1.submit() }}
                 </div>
               </div>
             </form>
         </li>
+     <li class="list-group-item" style="border-bottom: 1px solid #ccc!important;margin-bottom: 0px;">
+            <nav aria-label="breadcrumb" id="card-nav">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">>>头像修改</li>
+              </ol>
+            </nav>
+        </li>
+{#        <li class="list-group-item" id="node-nav">#}
+{##}
+{#          <div class="form-group row">#}
+{#                <label for="colFormLabelSm" class="col-2 col-form-label col-form-label text-right">#}
+{#                     <img class="rounded" src="{{ url_for('web.get_avatar',filename=user.avatar_m)}}" />#}
+{#                </label>#}
+{#                <div class="col-2" ></div>#}
+{#                <div class="col-8" >#}
+{##}
+{#                    <form action = "{{ url_for('web.change_avatar',user_id=user.id) }}" method = "post" enctype=multipart/form-data>#}
+{#                        <input type = "file" name = file>#}
+{#                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">#}
+{##}
+{#                </div>#}
+{#              </div>#}
+{##}
+{##}
+{#              <div class="form-group row">#}
+{#                <label for="colFormLabelSm" class="col-2 col-form-label col-form-label text-right"></label>#}
+{#                <div class="col-4" >#}
+{#                        <input type = "submit" id= "upload" value ='           上传             '>#}
+{#                     </form>#}
+{#                </div>#}
+{#                   <div class="col-6" ></div>#}
+{#              </div>#}
+{#        </li>#}
+
+
+    <li class="list-group-item" id="node-nav">
+
+          <div class="form-group row">
+                <label for="colFormLabelSm" class="col-2 col-form-label col-form-label text-right">
+                     <img class="rounded" src="{{ url_for('web.get_avatar',filename=user.avatar_m)}}" />
+                </label>
+                <div class="col-2" ></div>
+                <div class="col-8" >
+
+                   {{ render_form(upload_form, action=url_for('.upload_avatar',user_id=user.id)) }}
+
+                </div>
+              </div>
+
+
+              <div class="form-group row">
+
+                        {{ avatars.crop_box('web.get_avatar', current_user.avatar_raw) }}
+                        {{ avatars.preview_box('web.get_avatar', current_user.avatar_raw) }}
+
+                       {{ render_form(crop_form, action=url_for('.crop_avatar',user_id=user.id)) }}
+
+              </div>
+        </li>
     </ul>
 
 </div>
+
+
 {% endblock %}
 
 {% block right_main %}
      {% include 'right_user_card.html' %}
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='jcrop/js/jquery.Jcrop.min.js') }}"></script>
+    {{ avatars.init_jcrop() }}
 {% endblock %}

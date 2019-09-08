@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% from 'bootstrap/nav.html' import render_nav_item %}
+{% from 'bootstrap/pagination.html' import render_pager %}
 
 {% block left_main %}
 <div class="card">
@@ -57,7 +58,9 @@
         {% endfor %}
     </ul>
     <div class="card-footer">
-        更多新主题
+        {% if posts %}
+                <div class="page-footer">{{ render_pager(pagination) }}</div>
+            {% endif %}
     </div>
 </div>
 {% endblock %}

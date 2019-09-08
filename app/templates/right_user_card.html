@@ -65,7 +65,22 @@
                     <a href="#">0条未读提醒</a>
                 </div>
                 <div class="col-6">
-                    <p class="text-right"> <a href="#" id="money"> 00 <img src="{{ url_for('static',filename='img/silver@2x.png') }}" height="16" width="16" /> 00 <img src="{{ url_for('static',filename='img/bronze@2x.png') }}" height="16" width="16" /> </a></p>
+{#                    <p class="text-right">#}
+{#                        <a href="#" id="money"> 00#}
+{#                            <img src="{{ url_for('static',filename='img/silver@2x.png') }}" height="16" width="16" />#}
+{#                            00 <img src="{{ url_for('static',filename='img/bronze@2x.png') }}" height="16" width="16" />#}
+{#                        </a></p>#}
+                </div>
+            </div>
+        </li>
+            <li class="list-group-item">
+            <div class="row">
+                <div class="col-6" style="padding-top: 6px;">
+                    <a href="{{ url_for('.show_collects',user_id=user.id) }}">我的收藏</a>
+                </div>
+                <div class="col-6">
+                    <p class="text-right" ><span class="badge badge-pill badge-info" id="collect_count">
+                        {{ user.collections.count() }}</span></p>
                 </div>
             </div>
         </li>
@@ -104,7 +119,6 @@
     {% if not current_user.is_authenticated %}
         <li class="list-group-item">
             <strong>V2EX = way to explore<br /></strong>
-            <p>这只是一个仿站</p>
         </li>
         <li class="list-group-item">
             <div class="mx-auto" style="width: 120px;">
@@ -115,4 +129,5 @@
     {% endif %}
 
     </ul>
+
 </div>

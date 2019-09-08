@@ -6,20 +6,22 @@
 """
 
 import random
+import threading
+import time
 
 import requests
 import json
 from time import sleep
 
+from flask import current_app
 from sqlalchemy.exc import IntegrityError
 
 from app import db
-from app.models import Tag, User, Post, Comment
+from app.models import Tag, User, Post, Comment, Collect
 from faker import Faker
 fake = Faker("zh_CN")
 
 def fake_tag():
-    '''填充tag'''
     tags = ['技术','生活','职场','资料','影音']
     for t in tags:
         tag = Tag(name=t)
@@ -28,9 +30,8 @@ def fake_tag():
     return 'Done'
 
 
-def fake_users(num=10):
-    '''填充用户'''
-    for i in range(num):
+def fake_users(count):
+    for i in range(count):
         url = 'https://randomuser.me/api/'
         r = requests.get(url).text
         data = json.loads(r)
@@ -50,7 +51,6 @@ def fake_users(num=10):
             db.session.commit()
         except IntegrityError:
             db.session.rollback()
-        print('已填充{}个用户'.format(i+1))
     return 'Done'
 
 def fake_follows(count):
@@ -60,25 +60,25 @@ def fake_follows(count):
     db.session.commit()
 
 
-def fake_post():
-    '''填充帖子'''
-    url = "https://www.v2ex.com/api/topics/latest.json"
-    r = requests.get(url).text
-    datas = json.loads(r)
-    for data in datas:
-        title = data['title']
-        content = data['content_rendered']
-        if title:
-            post = Post(title=title,content=content)
-            post.tag = Tag.query.get(random.randint(1, Tag.query.count()))
-            post.author = random.choice(User.query.all())
-            post.publish_time = fake.date_this_year()
-            db.session.add(post)
-            db.session.commit()
+def fake_post(count):
+    for i in range(count):
+        url = "https://www.v2ex.com/api/topics/latest.json"
+        r = requests.get(url).text
+        datas = json.loads(r)
+        for data in datas:
+            title = data['title']
+            content = data['content_rendered']
+            if title:
+                post = Post(title=title,content=content)
+                post.tag = Tag.query.get(random.randint(1, Tag.query.count()))
+                post.author = random.choice(User.query.all())
+                post.publish_time =  fake.date_time_between(start_date="-1y", end_date="now", tzinfo=None)
+                db.session.add(post)
+                db.session.commit()
     return 'Done'
 
-def fake_comment():
-    for i in range(50):
+def fake_comment(count):
+    for i in range(count):
         comment = Comment(
             content=fake.sentence(),
             publish_time=fake.date_this_year(),
@@ -89,16 +89,53 @@ def fake_comment():
         db.session.commit()
     return 'Done'
 
+def fake_collect(count):
+    for i in range(count):
+        collect = Collect(
+            #user=random.choice(User.query.all()),
+            user=User.query.get(31),
+            post=random.choice(Post.query.all()),
+            time=fake.date_this_year()
+        )
+        db.session.add(collect)
+        db.session.commit()
+    return 'Done'
 
+
+
+def async_fake_user(app,count):
+    with app.app_context():
+        fake_users(count)
 
 def fake_data():
-    print('开始填充Tag')
-    fake_tag()
-    print('开始填充用户')
-    fake_users(20)
-    fake_follows(200)
-    print('开始填充帖子')
-    fake_post()
-    print('开始填充评论')
-    fake_comment()
+    # print('开始填充Tag...')
+    # fake_tag()
+    #
+    # print('开始填充用户...')
+    # t1=time.time()
+    # app=current_app._get_current_object()
+    # thr=[]
+    # for i in range(3):
+    #     t = threading.Thread(target=async_fake_user,args=(app,10))
+    #     thr.append(t)
+    #
+    # for t in thr:
+    #     t.start()
+    #     print(t.name+'正在进行...')
+    #
+    # for t in thr:
+    #     t.join()
+    # t2=time.time()
+    # print(t2-t1)
+    #
+    # print('开始填充关注...')
+    # fake_follows(200)
 
+    print('开始填充帖子...')
+    fake_post(2)
+
+    print('开始填充评论...')
+    fake_comment(100)
+
+    print('开始填充收藏...')
+    fake_collect(20)

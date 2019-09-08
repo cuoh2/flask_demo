@@ -9,5 +9,18 @@
             <small style="color: #999;"><a href="{{ url_for('web.post',id=h_p.id) }}"> {{ h_p.title }}</a></small>
         </li>
         {% endfor %}
+     <li class="list-group-item">
+            <strong>V2EX = way to explore<br /></strong>
+            <p></p>
+        </li>
+        {% if not current_user.is_authenticated %}
+    <li class="list-group-item">
+        <div class="mx-auto" style="width: 120px;">
+        <button type="button" class="btn btn-sm" style="margin-left: 8px"><a href="{{ url_for('web.register') }}">现在注册</a> </button>
+        <p>已有账户？<a href="{{ url_for('web.login') }}">登录</a> </p>
+        </div>
+    </li>
+        {% endif %}
+
     </ul>
 </div>

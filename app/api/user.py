@@ -14,3 +14,8 @@ from . import api
 def user(user_id):
     user = User.query.get_or_404(user_id)
     return jsonify(user)
+
+@api.route('/users')
+def users():
+    users = User.query.all()
+    return jsonify(users)

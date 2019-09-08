@@ -33,9 +33,6 @@
                       action="{{ url_for('web.follow', user_id=user.id, next=request.full_path) }}">
                     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                     <button type="submit" class="btn btn-primary btn-sm">+关注</button>
-                    {% if current_user.is_followed_by(user) %}
-                        <p class="badge badge-light">TA关注了你</p>
-                    {% endif %}
                 </form>
             {% endif %}
         {% endif %}

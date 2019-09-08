@@ -8,10 +8,11 @@ import re
 
 from sqlalchemy import func, desc
 
+from app.utils import redirect_back
 from . import web
 from flask import render_template, request, url_for, redirect, flash, make_response, jsonify, send_from_directory, \
     current_app, Response
-from ..models import Tag, Post,User,Comment,CollecTag, CollectPost
+from ..models import Tag, Post,User,Comment,Collect
 from .. import db#, cache
 from flask_login import login_required, current_user
 from datetime import datetime,date
@@ -24,6 +25,8 @@ import json
 @web.route('/',methods=['GET'])
 # @cache.cached(timeout=60*2)
 def index():
+    per_page = current_app.config['POST_PER_PAGE']
+    page = request.args.get('page',type=int,default=1)
     tags = Tag.query.order_by(Tag.id).all()
     tag = request.args.get('tag','')
     if tag and tag != request.cookies.get('tag',''):
@@ -34,14 +37,16 @@ def index():
     hot_posts = [p for p in Post.query.all() if (datetime.now() - p.publish_time).days == 0]
     hot_posts.sort(key=lambda x: x.comments.count(), reverse=True)
     if tag == 'all':
-        posts = Post.query.order_by(Post.publish_time.desc()).all()
+        pagination = Post.query.join(Comment,isouter=True).group_by(Post.id).order_by(
+              Post.publish_time.desc(),Comment.publish_time.desc()).paginate(page,per_page)
     elif tag == 'hot':
-        posts = Post.query.all()
-        posts.sort(key=lambda x: x.comments.count(),reverse=True)
+        pagination = Post.query.join(Comment).group_by(Post.id).order_by(
+             func.count(Comment.id).desc(),Comment.publish_time.desc()).paginate(page,per_page)
     else:
-        posts = Post.query.filter_by(tag_id=t.id).order_by(Post.publish_time.desc()).all()
-        posts.sort(key=lambda x: x.comments.count(),reverse=True)
-    return render_template('index.html',tags=tags,tag=tag,posts=posts,hot_posts=hot_posts,user=current_user)
+        pagination = Post.query.filter_by(tag_id=t.id).join(Comment).group_by(Post.id).order_by(
+              Post.publish_time.desc(),Comment.publish_time.desc()).paginate(page,per_page)
+    posts = pagination.items
+    return render_template('index.html',tags=tags,tag=tag,posts=posts,hot_posts=hot_posts,pagination=pagination, user=current_user)
 
 def index_cookie(tag):
     resp = make_response(redirect(url_for('web.index',tag=tag)))
@@ -71,9 +76,9 @@ def title_clean(t):
 @web.route('/p/<int:id>')
 def post(id):
     post = Post.query.get_or_404(id)
-    post.chicking()
+    post.clicking()
     comments = post.comments.all()
-    last_comment = post.comments.order_by(Comment.publish_time.desc()).first()
+    last_comment = post.last_comment
     return render_template('post.html',post=post,comments=comments,last_comment=last_comment,user=current_user)
 
 @web.route('/p/<int:id>/reply',methods=['POST'])
@@ -125,42 +130,38 @@ def collect_post():
     post_id = request.args.get('post_id')
     post = Post.query.filter_by(id=post_id).first()
     if post:
-        c = CollectPost.query.filter_by(post_id=post_id,user_id=current_user.id).first()
+        c = Collect.query.filter_by(post_id=post_id,user_id=current_user.id).first()
         if c:
             db.session.delete(c)
             db.session.commit()
             return {
-                     "res": '加入收藏'
+                     "res": '加入收藏',
+                    "count":current_user.collections.count()
                 }
         else:
-            c = CollectPost(post_id=post_id, user_id=current_user.id)
+            c = Collect(post_id=post_id, user_id=current_user.id)
             db.session.add(c)
             db.session.commit()
-            return Response(json.dumps({"res": '取消收藏'}))
+            return Response(json.dumps({"res": '取消收藏',
+                                        "count": current_user.collections.count()
+                                        }))
 
     return {"res": '加入收藏' }
-
-@web.route('/collect/posts')
-@login_required
-def collect_posts():
-    posts = Post.query.join(CollectPost, CollectPost.post_id == Post.id).filter(CollectPost.user_id==current_user.id).all()
-    return render_template('collect_posts.html',posts=posts)
 
 
 @web.route('/avatars/<path:filename>')
 def get_avatar(filename):
     return send_from_directory(current_app.config['AVATARS_SAVE_PATH'],filename)
 
-@web.route('/delete',methods=['GET','POST'])
+@web.route('/delete/<int:post_id>',methods=['GET','POST'])
 @login_required
-def delete_post():
+def delete_post(post_id):
     if request.method == 'POST':
-        post_id=request.form.get('post_id')
         post = Post.query.get_or_404(post_id)
         if post:
             db.session.delete(post)
             db.session.commit()
-            return jsonify({'result': 'ok'})
+            return redirect(url_for('.user',username=current_user.username))
 
 @web.route('/edit/post/<int:post_id>',methods=['GET','POST'])
 @login_required

@@ -16,15 +16,14 @@ from app import db, login_manager
 
 class Follow(db.Model):
     """关注"""
-    follower_id = Column(Integer,ForeignKey('users.id'),primary_key=True)
+    follower_id = Column(Integer,ForeignKey('user.id'),primary_key=True)
     follower = relationship('User',back_populates='following',foreign_keys=[follower_id],lazy='joined')
     """被关注"""
-    followed_id = Column(Integer,ForeignKey('users.id'),primary_key=True)
+    followed_id = Column(Integer,ForeignKey('user.id'),primary_key=True)
     followed = relationship('User',back_populates='followers',foreign_keys=[followed_id],lazy='joined')
     timestamp = Column(DateTime,default=datetime.utcnow)
 
 class User(UserMixin, db.Model):
-    __tablename__ = 'users'
     id = db.Column(db.Integer,primary_key=True)
     username = db.Column(db.String(64),unique=True,index=True)
     password_hash = db.Column(db.String(128))
@@ -32,10 +31,11 @@ class User(UserMixin, db.Model):
     bio=db.Column(db.String(120))
     location=db.Column(db.String(50))
     member_since=db.Column(db.DateTime, default=datetime.utcnow)
-    posts = db.relationship('Post',backref='author',lazy='dynamic')
-    comments = db.relationship('Comment',backref='author',lazy='dynamic')
-    collectags = db.relationship('CollecTag',backref='users',lazy='dynamic')
-    collectposts = db.relationship('CollectPost',backref='users',lazy='dynamic')
+
+    posts = db.relationship('Post',back_populates='author',lazy='dynamic')
+    comments = db.relationship('Comment',back_populates='author',lazy='dynamic')
+    collections = db.relationship('Collect',back_populates='user',cascade='all',lazy='dynamic')
+
     avatar_s=db.Column(db.String(64))
     avatar_m=db.Column(db.String(64))
     avatar_l=db.Column(db.String(64))
@@ -105,59 +105,78 @@ def load_user(user_id):
 
 
 class Tag(db.Model):
-    __tablename__ = 'tags'
     id = db.Column(db.Integer,primary_key=True)
     name = db.Column(db.String(64),unique=True)
-    posts = db.relationship('Post',backref='tag',lazy='dynamic')
-
-    def __repr__(self):
-        return '<Role %r>' % self.name
-    def collection(self,user):
-        return CollecTag.query.filter_by(tag_id=self.id,user_id=user.id).first()
+    posts = db.relationship('Post',back_populates='tag',lazy='dynamic')
 
 
 class Post(db.Model):
-    __tablename__ = 'posts'
     id = db.Column(db.Integer,primary_key=True)
     title = db.Column(db.Text)
     content = db.Column(db.Text)
     repies = db.Column(db.Integer,default=0)
-    chick = db.Column(db.Integer,default=0)
-    tag_id = db.Column(db.Integer,db.ForeignKey('tags.id'))
-    publish_time = db.Column(db.DateTime,default=datetime.now())
-    author_id = db.Column(db.Integer,db.ForeignKey('users.id'))
-    comments = db.relationship('Comment',backref='post',lazy='dynamic')
+    click = db.Column(db.Integer,default=0)
 
-    def chicking(self):
-        self.chick = self.chick + 1
+    tag =db.relationship('Tag',back_populates='posts')
+    tag_id = db.Column(db.Integer,db.ForeignKey('tag.id'))
+
+    publish_time = db.Column(db.DateTime,default=datetime.now())
+
+    author = db.relationship('User',back_populates='posts')
+    author_id = db.Column(db.Integer,db.ForeignKey('user.id'))
+    comments = db.relationship('Comment',back_populates='post',lazy='dynamic')
+    collectors= db.relationship('Collect',back_populates='post',cascade='all',lazy='dynamic')
+
+    def clicking(self):
+        self.click = self.click + 1
         db.session.add(self)
         db.session.commit()
 
-    def collection(self,user):
+    def is_collection(self,user):
         if not user.is_authenticated:
             return False
-        return CollectPost.query.filter_by(post_id=self.id,user_id=user.id).first()
+        return Collect.query.filter_by(post_id=self.id, user_id=user.id).first()
+
+    @property
+    def comment_count(self):
+        return self.comments.count()
+
+    @property
+    def last_comment(self):
+        return self.comments.order_by(Comment.publish_time.desc()).first()
+
+
+    def keys(self):
+        return ['id', 'title', 'content','publish_time','comment_count',]
+
+    def __getitem__(self, item):
+        return getattr(self,item)
 
 class Comment(db.Model):
-    __tablename__ = 'comments'
     id = db.Column(db.Integer,primary_key=True)
     content = db.Column(db.Text)
     publish_time = db.Column(db.DateTime,default=datetime.now())
-    post_id = db.Column(db.Integer,db.ForeignKey('posts.id'))
-    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
+
+    post = db.relationship('Post',back_populates='comments')
+    post_id = db.Column(db.Integer,db.ForeignKey('post.id'))
+
+    author = db.relationship('User',back_populates='comments')
+    user_id = db.Column(db.Integer,db.ForeignKey('user.id'))
 
 
-class CollecTag(db.Model):
-    __tablename__ = 'collactag'
-    id = db.Column(db.Integer,primary_key=True)
-    tag_id = db.Column(db.Integer,db.ForeignKey('tags.id'))
-    user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
-    time = db.Column(db.DateTime,default=datetime.now())
+    def keys(self):
+        return ['post_id', 'user_id','publish_time']
 
-class CollectPost(db.Model):
-    __tablename__ = 'collectpost'
-    user_id = db.Column(db.Integer,db.ForeignKey('users.id'), primary_key=True)
-    post_id = db.Column(db.Integer, db.ForeignKey('posts.id'), primary_key=True)
+    def __getitem__(self, item):
+        return getattr(self,item)
+
+
+class Collect(db.Model):
+    user = db.relationship('User',back_populates='collections')
+    user_id = db.Column(db.Integer,db.ForeignKey('user.id'), primary_key=True)
+
+    post = db.relationship('Post',back_populates='collectors')
+    post_id = db.Column(db.Integer, db.ForeignKey('post.id'), primary_key=True)
     time = db.Column(db.DateTime, default=datetime.now())
 
 

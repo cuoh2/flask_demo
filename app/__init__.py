@@ -57,8 +57,8 @@ def register_extensions(app):
 def register_shell_context(app):
     @app.shell_context_processor
     def make_shell_context():
-        from app.models import User, Tag, Post
-        return dict(db=db, User=User, Post=Post, Tag=Tag)
+        from app.models import User, Tag, Post,Comment
+        return dict(db=db, User=User, Post=Post, Tag=Tag,Comment=Comment)
 
 def register_commands(app):
     @app.cli.command()
@@ -76,10 +76,9 @@ def register_commands(app):
     @app.cli.command()
     def forge():
         """Generate fake data."""
-        db.drop_all()
-        db.create_all()
+        # db.drop_all()
+        # db.create_all()
         fake_data()
-
         click.echo('Done.')
 
 
