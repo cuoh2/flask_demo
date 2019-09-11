@@ -19,17 +19,17 @@ from flask import render_template, request, url_for, redirect, flash, make_respo
 @web.route('/member/<username>')
 def user(username):
     user = User.query.filter_by(username=username).first()
-    per_page=current_app.config['POST_PER_PAGE']
     page=request.args.get('page', type=int, default=1)
+    per_page=current_app.config['POST_PER_PAGE']
     tags = Tag.query.order_by(Tag.id).all()
     tag = request.args.get('tag', 'all')
     t = Tag.query.filter_by(name=tag).first()
     if tag == 'all':
         pagination=Post.query.filter_by(author_id=user.id).order_by(
-                        Post.publish_time.desc()).paginate(page, per_page)
+                        Post.publish_time.desc()).paginate(page,per_page)
     else:
         pagination=Post.query.filter_by(tag_id=t.id,author_id=user.id).order_by(
-                        Post.publish_time.desc()).paginate(page, per_page)
+                        Post.publish_time.desc()).paginate(page,per_page)
     posts = pagination.items
     return render_template('user.html', tags=tags, tag=tag, pagination=pagination,posts=posts, user=user)
 

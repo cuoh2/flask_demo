@@ -18,6 +18,7 @@
     <link href="{{ url_for('static',filename='css/base.css') }}" rel="stylesheet">
     <link href="{{ url_for('static',filename='css/markdown.css') }}" rel="stylesheet">
     <script src="{{ url_for('static',filename='js/base.js') }}"></script>
+{#    <script src="{{ url_for('static', filename='js/socket.io.min.js') }}"></script>#}
     <title>V2EX{% block title %}{% endblock %}</title>
 </head>
 {% endblock %}
@@ -26,13 +27,14 @@
 <nav class="navbar navbar-expand navbar-light">
   <div class="container">
       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-      <strong><a class="nav-link" href="/">首页 <span class="sr-only">(current)</span></a></strong>
+      <strong><a class="btn btn" href="/">首页 <span class="sr-only">(current)</span></a></strong>
 {#      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">#}
 {#        <span class="navbar-toggler-icon"></span>#}
 {#      </button>#}
-        <form class="form-inline mr-auto mt-2 mt-lg-0" id="nav-search">
-          <input id="nav-search-input" class="form-control mr-sm-2" type="search" placeholder="搜索关键字" aria-label="Search">
-{#          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>#}
+        <form class="form-inline mr-auto mt-2 mt-lg-0" action="{{ url_for('web.search') }}" method="get">
+          <input id="nav-search-input" class="form-control mr-sm-2" name="word" type="search"
+                 value="{{ request.args.get('word')or'' }}" aria-label="Search">
+          <button  class="btn btn-light btn-sm" type="submit">搜索</button>
         </form>
         <ul class="navbar-nav">
           <li class="nav-item active">
@@ -41,19 +43,22 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('web.user',username=current_user.username) }}">{{ current_user.username }}</a>
           </li>
+                {% if current_user.role_id == 1 or current_user.role_id == 2%}
+              <li class="nav-item">
+                <a class="btn btn" href="{{ url_for('admin.index') }}">后台管理</a></li>
+            {% endif %}
+
           <li class="nav-item">
-          <strong><a class="nav-link" href="{{ url_for('web.edit_profile',
-                             user_id=current_user.id) }}">设置</a></strong>
+              <a class="btn btn" href="{{ url_for('web.logout') }}">退出</a>
           </li>
-          <li class="nav-item">
-            <strong><a class="nav-link" href="{{ url_for('web.logout') }}">退出</a></strong>
-          </li>
+
             {% else %}
+
           <li class="nav-item">
-            <strong><a class="nav-link" href="{{ url_for('web.login') }}">登录</a></strong>
+            <a class="btn btn" href="{{ url_for('web.login') }}">登录</a>
           </li>
           <li class="nav-item">
-           <strong> <a class="nav-link" href="{{ url_for('web.register') }}">注册</a></strong>
+            <a class="btn btn" href="{{ url_for('web.register') }}">注册</a>
           </li>
             {% endif %}
         </ul>
@@ -79,6 +84,7 @@
 {% block scripts %}
     {{ moment.include_moment(local_js=url_for('static', filename='js/moment-with-locales.min.js')) }}
     {{moment.locale(auto_detect='True')}}
+
 {% endblock %}
 </body>
 </html>

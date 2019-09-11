@@ -1,0 +1,215 @@
+{% extends 'admin/index.html' %}
+{% block left_main %}
+    {{ super() }}
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                 <div class="row">
+                      <div class="col-1">
+                          <span class="post-info"><a href="{{ url_for('admin.users',rule='all') }}" >全部</a></span>
+                     </div>
+                     <div class="col-2">
+                         <span class="post-info"><a href="{{ url_for('admin.users',rule='new') }}">按时间</a></span>
+
+                     </div>
+                     <div class="col-2">
+                          <span class="post-info"><a href="{{ url_for('admin.users',rule='moderators') }}">管理员</a></span>
+
+                     </div>
+                    <div class="col-2">
+                          <span class="post-info"><a href="{{ url_for('admin.users',rule='sum') }}">按发帖量</a></span>
+
+                     </div>
+                     <div class="col-5">
+                        <form class="form-inline mr-auto mt-2 mt-lg-0" action="{{ url_for('.users') }}" method="get">
+                          <input id="nav-search-input" class="form-control mr-sm-2" name="word"
+                                 type="search" placeholder="" aria-label="Search" value="{{ request.args.get('word')or'' }}">
+                          <button  class="btn btn-light btn-sm" type="submit">搜索</button>
+                        </form>
+
+                     </div>
+                </div>
+         </li>
+        </ul>
+{#             <table class="table table-striped">#}
+{#                <thead>#}
+{#                <tr>#}
+{#                    <th>ID</th>#}
+{#                    <th>用户</th>#}
+{#                    <th>用户名</th>#}
+{#                    <th>邮箱</th>#}
+{#                    <th>发帖数量</th>#}
+{#                    <th>设置/角色</th>#}
+{#                </tr>#}
+{#                </thead>#}
+{#            {% for u in users %}#}
+{#                <tr>#}
+{#                    <td><span class="post-title"> {{u.id}}</span></td>#}
+{##}
+{#                    <td><a href="{{ url_for('web.user',username=u.username) }}">#}
+{#                    <img src="{{ url_for('web.get_avatar',filename=u.avatar_s) }}" height="48px" width="48px"#}
+{#                         class="rounded" /></a></td>#}
+{##}
+{#                    <td> <span class="post-title"><a href="{{ url_for('web.user',username=u.username) }}" id="post-title">#}
+{#                        {{u.username }}</a></span></td>#}
+{##}
+{#                    <td><span class="post-title"><a href="{{ url_for('web.user',username=u.username) }}" id="post-title">#}
+{#                        {{u.email }}</a></span></td>#}
+{##}
+{#                    <td><span class="post-title"><a href="{{ url_for('web.user',username=u.username) }}" id="post-title">#}
+{#                        {{u.posts.count()}}</a></span></td>#}
+{##}
+{#                    <td>#}
+{##}
+{#                    {% if current_user.role_id ==1 %}#}
+{##}
+{#                         <form action="{{ url_for('admin.set_role') }}" method="post" id="{{ u.username }}">#}
+{#                                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">#}
+{#                                    <input type="hidden" name="user_id" value="{{ u.id }}">#}
+{#                         <select class="form-control form-control-sm"  name="new_role_id" onchange="{{ u.username }}();">#}
+{#                            {% if u.role_id ==1 %}#}
+{#                                <option value="{{ u.role_id }}"  selected="selected" >{{ u.role.name }}</option>#}
+{#                            {% else %}#}
+{#                                 {% for role in roles %}#}
+{#                                     <option value="{{ role.id }}" {% if role.id == u.role_id %} selected="selected" {% endif %}>#}
+{#                                             {{ role.name }}</option>#}
+{#                                 {% endfor %}#}
+{#                            {% endif %}#}
+{#                        </select>#}
+{#                         </form>#}
+{##}
+{#                    {% elif current_user.role_id ==2 %}#}
+{##}
+{#                         <form action="{{ url_for('admin.set_role') }}" method="post" id="{{ u.username }}">#}
+{#                                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">#}
+{#                                    <input type="hidden" name="user_id" value="{{ u.id }}">#}
+{#                        <select class="form-control form-control-sm"  name="new_role_id"  onchange="{{ u.username }}();" >#}
+{#                            {% if u.role_id ==1 %}#}
+{#                                <option value="1"  selected="selected" >{{ u.role.name }}</option>#}
+{#                            {% elif u.role_id ==2 %}#}
+{#                                <option value="2"  selected="selected" >{{ u.role.name }}</option>#}
+{#                            {% else %}#}
+{#                                 {% for role in roles %}#}
+{#                                     <option value="{{ role.id }}" {% if role.id == u.role_id %} selected="selected" {% endif %}>#}
+{#                                             {{ role.name }}</option>#}
+{#                                 {% endfor %}#}
+{#                            {% endif %}#}
+{#                        </select>#}
+{#                         </form>#}
+{##}
+{#                    {% endif %}#}
+{##}
+{#                    </td>#}
+{##}
+{#                </tr>#}
+{#               {% endfor %}#}
+{#        </table>#}
+     <li class="list-group-item">
+             <div class="row">
+                  <div class="col-1">
+                   <span class="post-info">ID</span>
+                 </div>
+                 <div class="col-1">
+                   <span class="post-info">用户</span>
+                 </div>
+                 <div class="col-3">
+                   <span class="post-info">用户名</span>
+                 </div>
+                 <div class="col-3">
+                   <span class="post-info">邮箱</span>
+                 </div>
+                 <div class="col-1">
+                   <span class="post-info">发帖</span>
+                 </div>
+                 <div class="col-3">
+                   <span class="post-info">设置/角色</span>
+                 </div>
+
+             </div>
+         </li>
+    {% for u in users %}
+     <li class="list-group-item">
+             <div class="row">
+                  <div class="col-1">
+                   <span class="post-info">{{u.id}}</span>
+                 </div>
+                 <div class="col-1">
+                   <span class="post-info">
+                       <a href="{{ url_for('web.user',username=u.username) }}">
+                           <img src="{{ url_for('web.get_avatar',filename=u.avatar_s) }}" height="48px"
+                                width="48px" class="rounded" /></a></span>
+                 </div>
+                 <div class="col-3">
+                   <span class="post-title"><a href="{{ url_for('web.user',username=u.username) }}" >
+                        {{ u.username }}</a></span>
+                 </div>
+                 <div class="col-3">
+                  <span class="post-info">{{ u.email }}</span>
+                 </div>
+                 <div class="col-1">
+                   <span class="post-title"><a href="{{ url_for('web.user',username=u.username) }}" >
+                        {{ u.posts.count() }}</a></span>
+                 </div>
+                 <div class="col-3">
+                   {% if current_user.role_id ==1 %}
+
+                         <form action="{{ url_for('admin.set_role') }}" method="post" id="{{ u.username }}">
+                                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                    <input type="hidden" name="user_id" value="{{ u.id }}">
+                         <select class="form-control form-control-sm"  name="new_role_id" onchange="{{ u.username }}();">
+                            {% if u.role_id ==1 %}
+                                <option value="{{ u.role_id }}"  selected="selected" >{{ u.role.name }}</option>
+                            {% else %}
+                                 {% for role in roles %}
+                                     <option value="{{ role.id }}" {% if role.id == u.role_id %} selected="selected" {% endif %}>
+                                             {{ role.name }}</option>
+                                 {% endfor %}
+                            {% endif %}
+                        </select>
+                         </form>
+
+                    {% elif current_user.role_id ==2 %}
+
+                         <form action="{{ url_for('admin.set_role') }}" method="post" id="{{ u.username }}">
+                                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                    <input type="hidden" name="user_id" value="{{ u.id }}">
+                        <select class="form-control form-control-sm"  name="new_role_id"  onchange="{{ u.username }}();" >
+                            {% if u.role_id ==1 %}
+                                <option value="1"  selected="selected" >{{ u.role.name }}</option>
+                            {% elif u.role_id ==2 %}
+                                <option value="2"  selected="selected" >{{ u.role.name }}</option>
+                            {% else %}
+                                 {% for role in roles %}
+                                     <option value="{{ role.id }}" {% if role.id == u.role_id %} selected="selected" {% endif %}>
+                                             {{ role.name }}</option>
+                                 {% endfor %}
+                            {% endif %}
+                        </select>
+                         </form>
+
+                    {% endif %}
+                 </div>
+
+             </div>
+         </li>
+    {% endfor %}
+
+    <div class="card-footer">
+        {% if users %}
+                <div class="page-footer">{{ render_pagination(pagination) }}</div>
+        {%else %}
+            暂无结果
+        {% endif %}
+    </div>
+
+    <script>
+        {% for u in users %}
+
+        function {{ u.username }}(){
+            var form = document.getElementById("{{ u.username }}");
+            form.submit();
+        }
+        {% endfor %}
+
+    </script>
+
+{% endblock %}

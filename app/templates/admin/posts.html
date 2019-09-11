@@ -1,0 +1,102 @@
+{% extends 'admin/index.html' %}
+{% block left_main %}
+    {{ super() }}
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                 <div class="row">
+                      <div class="col-3">
+                       <span class="post-info"><a href="{{ url_for('.posts',rule='all') }}" >按时间</a></span>
+                     </div>
+                     <div class="col-4">
+                         <span class="post-info"><a href="{{ url_for('.posts',rule='hot') }}">按热度</a></span>
+                     </div>
+
+                     <div class="col-5">
+                        <form class="form-inline mr-auto mt-2 mt-lg-0" action="{{ url_for('.posts') }}" method="get">
+                          <input id="nav-search-input" class="form-control mr-sm-2" name="word" type="search"
+                                 placeholder="" aria-label="Search" value="{{ request.args.get('word')or'' }}">
+                          <button  class="btn btn-light btn-sm" type="submit">搜索</button>
+                        </form>
+                </div>
+         </li>
+        </ul>
+         <li class="list-group-item">
+             <div class="row">
+                  <div class="col-1">
+                   <span class="post-info">选择</span>
+                 </div>
+                 <div class="col-4">
+                   <span class="post-info">标题</span>
+                 </div>
+                 <div class="col-3">
+                   <span class="post-info">作者</span>
+                 </div>
+                 <div class="col-1">
+                   <span class="post-info">浏览</span>
+                 </div>
+                 <div class="col-1">
+                   <span class="post-info">评论</span>
+                 </div>
+                 <div class="col-2">
+                   <span class="post-info">日期</span>
+                 </div>
+
+             </div>
+         </li>
+{% if posts %}
+    <form action="{{ url_for('.delete_post') }}" method="post">
+     {% for post in posts %}
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-1">
+                <label><input name="id_list" type="checkbox" value="{{ post.id }}"></label>
+                </div>
+            <div class="col-4">
+                 <span class="post-info">
+                     <strong><a href="{{ url_for('web.post',id=post.id) }}" >{{ post.title}}</a></span></strong>
+            </div>
+                <div class="col-3">
+                   <span class="post-title">
+                       <a href="{{ url_for('web.user',username=username) }}" >{{ post.author.username}}</a></span>
+                 </div>
+                 <div class="col-1">
+                   <span class="post-title">
+                       {{ post.click}}
+                   </span>
+                 </div>
+                 <div class="col-1">
+                   <span class="post-title">{{ post.comments.count()}}</span>
+                 </div>
+                 <div class="col-2">
+                   <span class="post-info">{{ post.publish_time.strftime("%Y-%m-%d %H:%M")}}</span>
+                 </div>
+
+             </div>
+        </li>
+        {% endfor %}
+
+        <li class="list-group-item">
+             <div class="row">
+                  <div class="col-12">
+                   <span class="post-info">
+                       <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                        <input type="submit" class="btn btn-light btn-sm" onclick="return confirm('你确定要删除吗？');" value="批量删除">
+                   </span>
+
+                 </div>
+                </div>
+         </li>
+        </form>
+    <div class="card-footer">
+        {% if pagination %}
+                <div class="page-footer">{{ render_pagination(pagination) }}</div>
+        {% endif %}
+    </div>
+{% else %}
+    <div class="card-footer">
+
+        暂无结果
+
+    </div>
+{% endif %}
+{% endblock %}

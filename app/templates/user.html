@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {#{% import "bootstrap/wtf.html" as wtf %}#}
 {% from 'bootstrap/pagination.html' import render_pager %}
+{% from 'bootstrap/pagination.html' import render_pagination %}
 
 {% block title %}
 —— {{ user.username }}
@@ -64,7 +65,7 @@
                         {% if current_user==p.author %}
                             <form action="{{ url_for('.delete_post',post_id=p.id) }}" method="post">
                                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                            <button type="submit" onclick="return confirm('确认删除吗？');">删除</button>
+                            <button type="submit" class="btn btn-light btn-sm" onclick="return confirm('确认删除吗？');">删除</button>
                             </form>
                         {% endif %}
 
@@ -80,7 +81,9 @@
         {% endfor %}
         <div class="card-footer">
         {% if posts %}
-                <div class="page-footer">{{ render_pager(pagination) }}</div>
+{#                <div class="page-footer">{{ render_pager(pagination) }}</div>#}
+                            <div class="page-footer">{{ render_pagination(pagination) }}</div>
+
             {% endif %}
         </div>
     </ul>

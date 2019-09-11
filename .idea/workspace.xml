@@ -2,26 +2,243 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e34509f7-a5a0-46ea-97d9-d4d0a77d87f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/forms/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/extensions.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/extensions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/macros.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/macros.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/forget_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/forget_password.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/right_hot_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/right_hot_post.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/right_user_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/right_user_card.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/user_edit_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user_edit_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/user_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user_login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/web/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/web/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/web/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/web/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/web/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/web/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data-dev.db" beforeDir="false" afterPath="$PROJECT_DIR$/data-dev.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fake.py" beforeDir="false" afterPath="$PROJECT_DIR$/fake.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/1014f5813a4145a68884aeb84d32cd57_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/1014f5813a4145a68884aeb84d32cd57_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/1014f5813a4145a68884aeb84d32cd57_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/ab26b4a7e3d8436aa3db38d0e4f3c4ed_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/ab26b4a7e3d8436aa3db38d0e4f3c4ed_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/ab26b4a7e3d8436aa3db38d0e4f3c4ed_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/angryduck808_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/angryduck808_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/angryduck808_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/angrysnake852_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/angrysnake852_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/angrysnake852_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigbutterfly248_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigbutterfly248_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigbutterfly248_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigrabbit316_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigrabbit316_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigrabbit316_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/blackkoala805_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/blackkoala805_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/blackkoala805_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/blacklion624_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/blacklion624_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/blacklion624_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/blackrabbit693_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/blackrabbit693_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/blackrabbit693_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/blueelephant904_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/blueelephant904_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/blueelephant904_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluefrog550_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluefrog550_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluefrog550_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluekoala422_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluekoala422_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluekoala422_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownostrich635_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownostrich635_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownostrich635_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazycat404_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazycat404_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazycat404_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/cuohoh_l.png" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/avatars/cuohoh_l.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/cuohoh_m.png" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/avatars/cuohoh_m.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/cuohoh_s.png" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/avatars/cuohoh_s.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenelephant136_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenelephant136_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenelephant136_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenelephant254_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenelephant254_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenelephant254_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenfrog550_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenfrog550_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenfrog550_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenfrog855_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenfrog855_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenfrog855_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenleopard621_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenleopard621_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenleopard621_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenmeercat902_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenmeercat902_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenmeercat902_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenpanda348_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenpanda348_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenpanda348_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenpeacock201_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenpeacock201_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenpeacock201_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenbird923_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenbird923_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenbird923_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenbutterfly743_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenbutterfly743_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenbutterfly743_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenduck403_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenduck403_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenduck403_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenkoala451_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenkoala451_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenkoala451_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenleopard953_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenleopard953_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenleopard953_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenswan139_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenswan139_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenswan139_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenwolf575_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenwolf575_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenwolf575_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/happymouse135_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/happymouse135_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/happymouse135_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/happysnake947_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/happysnake947_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/happysnake947_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/happyswan160_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/happyswan160_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/happyswan160_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavylion694_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavylion694_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavylion694_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavypanda580_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavypanda580_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavypanda580_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavyswan500_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavyswan500_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavyswan500_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavytiger450_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavytiger450_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavytiger450_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazybird779_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazybird779_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazybird779_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazydog442_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazydog442_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazydog442_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazygoose175_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazygoose175_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazygoose175_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazymouse665_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazymouse665_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazymouse665_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazyostrich743_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazyostrich743_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazyostrich743_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazyostrich808_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazyostrich808_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazyostrich808_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangebutterfly200_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangebutterfly200_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangebutterfly200_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangekoala918_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangekoala918_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangekoala918_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangemouse853_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangemouse853_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangemouse853_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangeostrich651_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangeostrich651_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangeostrich651_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangerabbit965_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangerabbit965_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangerabbit965_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/organiclion796_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/organiclion796_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/organiclion796_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicpeacock111_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicpeacock111_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicpeacock111_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicwolf789_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicwolf789_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicwolf789_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/purpleduck745_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/purpleduck745_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/purpleduck745_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplemeercat202_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplemeercat202_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplemeercat202_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplepeacock489_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplepeacock489_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplepeacock489_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplerabbit187_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplerabbit187_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplerabbit187_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/reddog785_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/reddog785_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/reddog785_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/redfrog411_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/redfrog411_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/redfrog411_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/redgoose754_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/redgoose754_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/redgoose754_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/redladybug815_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/redladybug815_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/redladybug815_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/redzebra353_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/redzebra353_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/redzebra353_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadbear687_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadbear687_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadbear687_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadbutterfly939_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadbutterfly939_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadbutterfly939_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadduck698_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadduck698_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadduck698_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadfish541_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadfish541_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadfish541_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadfrog311_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadfrog311_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadfrog311_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverbutterfly401_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverbutterfly401_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverbutterfly401_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverkoala996_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverkoala996_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverkoala996_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverostrich465_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverostrich465_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverostrich465_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverswan665_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverswan665_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverswan665_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/smallbird688_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/smallbird688_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/smallbird688_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/smallcat331_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/smallcat331_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/smallcat331_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/smallduck920_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/smallduck920_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/smallduck920_s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/smalllion571_l.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/smalllion571_m.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/avatars/smalllion571_s.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,28 +249,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/right_user_card.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="131" selection-start-line="131" selection-end-line="131" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/user.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="67" column="35" lean-forward="true" selection-start-line="64" selection-start-column="28" selection-end-line="67" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/web/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-67">
-              <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+            <state relative-caret-position="126">
+              <caret line="58" column="13" lean-forward="true" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
               <folding>
                 <element signature="e#108#117#0" expanded="true" />
               </folding>
@@ -62,71 +261,80 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/sqlalchemy/orm/util.py">
+        <entry file="file://$PROJECT_DIR$/app/web/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="795" column="26" lean-forward="true" selection-start-line="795" selection-start-column="26" selection-end-line="795" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/api/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/new_post.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="65" column="48" lean-forward="true" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/post.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="28" column="69" selection-start-line="28" selection-start-column="69" selection-end-line="28" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+            <state relative-caret-position="-216">
+              <caret line="66" column="48" lean-forward="true" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
               <folding>
-                <element signature="e#110#152#0" expanded="true" />
+                <element signature="e#110#139#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/index.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/templates/admin/users.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-648">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="124">
+              <caret line="115" column="23" lean-forward="true" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/web/user.py">
+        <entry file="file://$PROJECT_DIR$/app/templates/user_login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-              <folding>
-                <element signature="e#109#118#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="184">
+              <caret line="61" column="43" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/forget_password_email.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/forget_password.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="61" selection-start-line="61" selection-end-line="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/user.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="636">
+              <caret line="67" column="79" selection-start-line="67" selection-start-column="79" selection-end-line="67" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/right_user_card.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="20" column="96" selection-start-line="20" selection-start-column="96" selection-end-line="20" selection-end-column="96" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/flask_bootstrap/templates/bootstrap/pagination.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-519">
+              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/flask_bootstrap/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-756" />
           </provider>
         </entry>
       </file>
@@ -148,10 +356,16 @@
       <find>wtf</find>
       <find>boo</find>
       <find>main</find>
+      <find>count</find>
+      <find>user-count</find>
+      <find>user_count</find>
+      <find>filter</find>
+      <find>rule</find>
     </findStrings>
     <replaceStrings>
       <replace>web.</replace>
       <replace>web</replace>
+      <replace>rule</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -160,33 +374,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/flask_cache/jinja2ext.py" />
-        <option value="$PROJECT_DIR$/app/templates/collect_posts.html" />
-        <option value="$PROJECT_DIR$/.flaskenv" />
-        <option value="$PROJECT_DIR$/app/email.py" />
-        <option value="$PROJECT_DIR$/app/templates/forget_password_email.html" />
-        <option value="$PROJECT_DIR$/app/forms.py" />
-        <option value="$PROJECT_DIR$/app/templates/info.html" />
-        <option value="$PROJECT_DIR$/app/templates/forget_password.html" />
-        <option value="$PROJECT_DIR$/app/templates/reset_password.html" />
         <option value="$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/flask_bootstrap/templates/bootstrap/nav.html" />
         <option value="$PROJECT_DIR$/app/templates/star_node.html" />
         <option value="$PROJECT_DIR$/app/templates/collect_nodes.html" />
         <option value="$PROJECT_DIR$/app/templates/node.html" />
-        <option value="$PROJECT_DIR$/app/web/__init__.py" />
         <option value="$PROJECT_DIR$/populate.py" />
         <option value="$PROJECT_DIR$/app/templates/right_user_info.html" />
         <option value="$PROJECT_DIR$/app/templates/new_post.html" />
-        <option value="$PROJECT_DIR$/app/templates/user_login.html" />
         <option value="$PROJECT_DIR$/ttt.py" />
-        <option value="$PROJECT_DIR$/app/extensions.py" />
         <option value="$PROJECT_DIR$/app/web/auth.py" />
         <option value="$PROJECT_DIR$/app/templates/user_followers.html" />
         <option value="$PROJECT_DIR$/app/templates/user_followings.html" />
         <option value="$PROJECT_DIR$/app/templates/edit_post.html" />
         <option value="$PROJECT_DIR$/app/templates/post_edit.html" />
         <option value="$PROJECT_DIR$/app/templates/edit_profile.html" />
-        <option value="$PROJECT_DIR$/app/templates/base.html" />
         <option value="$PROJECT_DIR$/app/templates/user_register.html" />
         <option value="$PROJECT_DIR$/app/forms/auth.py" />
         <option value="$PROJECT_DIR$/app/app.py" />
@@ -194,37 +395,54 @@
         <option value="$PROJECT_DIR$/app/utils.py" />
         <option value="$PROJECT_DIR$/run.py" />
         <option value="$PROJECT_DIR$/app/templates/user_edit_profile.html" />
-        <option value="$PROJECT_DIR$/app/api/user.py" />
         <option value="$PROJECT_DIR$/app/api/__init__.py" />
         <option value="$PROJECT_DIR$/app/templates/user_collect_posts.html" />
         <option value="$PROJECT_DIR$/app/forms/main.py" />
+        <option value="$PROJECT_DIR$/app/templates/index.html" />
+        <option value="$PROJECT_DIR$/app/templates/right_hot_post.html" />
+        <option value="$PROJECT_DIR$/app/templates/admin/index.py" />
+        <option value="$PROJECT_DIR$/app/web/__init__.py" />
+        <option value="$PROJECT_DIR$/app/admin/__init__.py" />
+        <option value="$PROJECT_DIR$/app/admin/admin.py" />
+        <option value="$PROJECT_DIR$/app/templates/post.html" />
+        <option value="$PROJECT_DIR$/app/static/js/base.js" />
+        <option value="$PROJECT_DIR$/app/extensions.py" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/fake.py" />
         <option value="$PROJECT_DIR$/app/settings.py" />
-        <option value="$PROJECT_DIR$/app/templates/index.html" />
-        <option value="$PROJECT_DIR$/app/templates/right_hot_post.html" />
-        <option value="$PROJECT_DIR$/app/api/main.py" />
-        <option value="$PROJECT_DIR$/app/models.py" />
-        <option value="$PROJECT_DIR$/app/templates/right_user_card.html" />
+        <option value="$PROJECT_DIR$/app/templates/admin/index.html" />
         <option value="$PROJECT_DIR$/app/web/user.py" />
+        <option value="$PROJECT_DIR$/app/models.py" />
+        <option value="$PROJECT_DIR$/app/api/main.py" />
+        <option value="$PROJECT_DIR$/app/api/user.py" />
         <option value="$PROJECT_DIR$/app/templates/user.html" />
-        <option value="$PROJECT_DIR$/app/templates/post.html" />
+        <option value="$PROJECT_DIR$/app/templates/admin/posts.html" />
         <option value="$PROJECT_DIR$/app/web/main.py" />
+        <option value="$PROJECT_DIR$/app/templates/search.html" />
+        <option value="$PROJECT_DIR$/app/templates/base.html" />
+        <option value="$PROJECT_DIR$/app/templates/user_login.html" />
+        <option value="$PROJECT_DIR$/app/templates/forget_password.html" />
+        <option value="$PROJECT_DIR$/app/templates/right_user_card.html" />
+        <option value="$PROJECT_DIR$/app/web/admin.py" />
+        <option value="$PROJECT_DIR$/app/templates/admin/users.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="151" />
-    <option name="y" value="74" />
-    <option name="width" value="1141" />
-    <option name="height" value="682" />
+    <option name="x" value="198" />
+    <option name="y" value="90" />
+    <option name="width" value="1077" />
+    <option name="height" value="674" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -247,7 +465,27 @@
               <item name="demo2" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo2" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo2" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo2" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo2" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo2" type="b2602c69:ProjectViewProjectNode" />
@@ -255,11 +493,49 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="demo2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="demo2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 (albumy_-r9pNWw9P) &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="demo2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 (albumy_-r9pNWw9P) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 (albumy_-r9pNWw9P) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="flask_bootstrap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 (albumy_-r9pNWw9P) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="flask_bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.7 (albumy_-r9pNWw9P) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+              <item name="flask_bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -270,10 +546,12 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.templateLanguages.PyTemplateLanguageModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PyCharm\demo2\app\web" />
+      <recent name="D:\PyCharm\demo2\app\admin" />
       <recent name="D:\PyCharm\demo2\app" />
       <recent name="D:\PyCharm\demo2\app\forms" />
     </key>
@@ -379,17 +657,50 @@
       <workItem from="1567783949892" duration="554000" />
       <workItem from="1567784629535" duration="312000" />
       <workItem from="1567823447678" duration="43232000" />
-      <workItem from="1567908575657" duration="10424000" />
+      <workItem from="1567908575657" duration="62945000" />
+      <workItem from="1568047230622" duration="54124000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185553000" />
+    <option name="totallyTimeSpent" value="292198000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17927383" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="2" weight="0.3289689" />
+      <window_info anchor="bottom" id="Python Console" order="3" weight="0.32733223" />
+      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32604736" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.31423897" />
+      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.27168575" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.39934534" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" weight="0.3289689" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+    <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17700455" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -399,10 +710,10 @@
       <window_info anchor="bottom" id="Python Console" order="3" weight="0.32843137" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32783505" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3502455" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.2749591" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.43698853" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32604736" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.31751227" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.34860885" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.43371522" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
@@ -411,7 +722,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -419,370 +730,13 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/demo2$populate.coverage" NAME="populate Coverage Results" MODIFIED="1567325439580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/demo2$ttt.coverage" NAME="ttt Coverage Results" MODIFIED="1567695990700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/demo2$run.coverage" NAME="run Coverage Results" MODIFIED="1567920723705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/demo2$run.coverage" NAME="run Coverage Results" MODIFIED="1568164209027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/templates/user_followers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="45" lean-forward="true" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/user_followings.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/wtforms/widgets/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="285" column="6" selection-start-line="285" selection-start-column="6" selection-end-line="285" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/collect_nodes.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="45" column="53" lean-forward="true" selection-start-line="44" selection-start-column="47" selection-end-line="45" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/email.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="26" column="15" lean-forward="true" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
-          <folding>
-            <element signature="e#110#138#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pipfile">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/macros.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="34" column="85" selection-start-line="34" selection-start-column="85" selection-end-line="34" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/werkzeug/wrappers/base_request.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3112">
-          <caret line="493" column="8" selection-start-line="493" selection-start-column="8" selection-end-line="493" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/flask/globals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/werkzeug/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="119" selection-start-line="119" selection-end-line="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/werkzeug/_internal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="252" selection-start-line="252" selection-end-line="252" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/werkzeug/local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="347" selection-start-line="347" selection-end-line="347" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/tempfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="683" selection-start-line="683" selection-end-line="683" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/werkzeug/datastructures.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="2830" selection-start-line="2830" selection-end-line="2830" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/flask_login/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="260" selection-start-line="260" selection-end-line="260" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/web/auth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="12" selection-start-line="14" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/extensions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#115#152#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.flaskenv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/api/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/flask_sqlalchemy/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="518" selection-start-line="518" selection-end-line="518" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/api/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#109#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/user_register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/user_collect_posts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="90" selection-start-line="17" selection-start-column="90" selection-end-line="17" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/forms/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="34" column="22" lean-forward="true" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-          <folding>
-            <element signature="e#109#145#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/forms/auth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-          <folding>
-            <element signature="e#109#140#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/web/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/user_edit_profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2358">
-          <caret line="131" selection-start-line="131" selection-end-line="131" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1278">
-          <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
-          <folding>
-            <element signature="e#113#122#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/sqlalchemy/sql/operators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1663">
-          <caret line="1036" column="8" selection-start-line="1036" selection-start-column="8" selection-end-line="1036" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/sqlalchemy/orm/relationships.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="121" column="27" lean-forward="true" selection-start-line="121" selection-start-column="27" selection-end-line="121" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/sqlalchemy/orm/query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-954">
-          <caret line="1800" column="8" selection-start-line="1800" selection-start-column="8" selection-end-line="1800" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="17" />
-          <folding>
-            <element signature="e#114#123#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/flask_bootstrap/templates/bootstrap/pagination.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/right_hot_post.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fake.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-310">
-          <caret line="111" column="16" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="16" />
-          <folding>
-            <element signature="e#110#123#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="149" column="73" lean-forward="true" selection-start-line="149" selection-start-column="73" selection-end-line="149" selection-end-column="73" />
-          <folding>
-            <element signature="e#111#140#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/api/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/new_post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="65" column="48" lean-forward="true" selection-start-line="65" selection-start-column="48" selection-end-line="65" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/right_user_card.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="131" selection-start-line="131" selection-end-line="131" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-648">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="67" column="35" lean-forward="true" selection-start-line="64" selection-start-column="28" selection-end-line="67" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="28" column="69" selection-start-line="28" selection-start-column="69" selection-end-line="28" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
-          <folding>
-            <element signature="e#110#152#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/web/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-          <folding>
-            <element signature="e#109#118#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -793,13 +747,341 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/index.py" />
+    <entry file="file://$PROJECT_DIR$/app/api/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="5" selection-start-line="10" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/app/templates/user_followings.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/user_followers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="29" column="6" lean-forward="true" selection-start-line="8" selection-end-line="29" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/macros.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/flask_socketio/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1445">
+          <caret line="168" column="8" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/post_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="60" column="56" selection-start-line="60" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/user_register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/new_post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="62" column="10" lean-forward="true" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/web/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/js/socket.io.min.js" />
+    <entry file="file://$PROJECT_DIR$/app/templates/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="128" column="11" lean-forward="true" selection-start-line="128" selection-start-column="11" selection-end-line="128" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+          <folding>
+            <element signature="e#110#152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/web/auth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+          <folding>
+            <element signature="e#109#177#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/js/jquery-3.2.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/js/base.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/extensions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+          <folding>
+            <element signature="e#115#152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python/Lib/datetime.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11332">
+          <caret line="1508" column="6" selection-start-line="1508" selection-start-column="6" selection-end-line="1508" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/sqlalchemy/sql/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10772">
+          <caret line="212" column="8" selection-start-line="212" selection-start-column="8" selection-end-line="212" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fake.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="119" column="73" selection-start-line="119" selection-start-column="73" selection-end-line="119" selection-end-column="73" />
+          <folding>
+            <element signature="e#110#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="93" column="25" lean-forward="true" selection-start-line="92" selection-start-column="10" selection-end-line="93" selection-end-column="25" />
+          <folding>
+            <element signature="e#113#122#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+          <folding>
+            <element signature="e#114#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/flask_bootstrap/templates/bootstrap/nav.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/flask_sqlalchemy/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="434" column="8" selection-start-line="434" selection-start-column="8" selection-end-line="434" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1692">
+          <caret line="100" column="13" lean-forward="true" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
+          <folding>
+            <element signature="e#111#140#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/api/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="29" column="15" lean-forward="true" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+          <folding>
+            <element signature="e#109#134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/api/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/web/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="21" column="54" lean-forward="true" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+          <folding>
+            <element signature="e#109#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/posts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="16" column="106" selection-start-line="16" selection-start-column="106" selection-end-line="16" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="98" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/python/Lib/http/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="426" selection-start-line="426" selection-end-line="426" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/werkzeug/serving.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="360" selection-start-line="360" selection-end-line="360" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/werkzeug/debug/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="333" selection-start-line="333" selection-end-line="333" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="2462" selection-start-line="2462" selection-end-line="2462" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="60" column="74" selection-start-line="60" selection-start-column="74" selection-end-line="60" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="19" column="94" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/user_login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="61" column="43" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/forget_password_email.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/forget_password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="67" column="79" selection-start-line="67" selection-start-column="79" selection-end-line="67" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/right_user_card.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="20" column="96" selection-start-line="20" selection-start-column="96" selection-end-line="20" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/flask_bootstrap/templates/bootstrap/pagination.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-519">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/flask_bootstrap/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-756" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/web/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-67">
-          <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+        <state relative-caret-position="126">
+          <caret line="58" column="13" lean-forward="true" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
           <folding>
             <element signature="e#108#117#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/web/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="66" column="48" lean-forward="true" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
+          <folding>
+            <element signature="e#110#139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/users.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="115" column="23" lean-forward="true" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
         </state>
       </provider>
     </entry>

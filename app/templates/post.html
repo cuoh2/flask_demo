@@ -21,7 +21,8 @@
             </div>
         </div>
         <div class="card-body" id="post-foot">
-            <button type="button" class="btn btn-outline-secondary btn-sm" id="collect" data-catid="{{ post.id }}">{% if post.is_collection(current_user) %}取消收藏{% else %}加入收藏{% endif %}</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="collect" data-catid="{{ post.id }}">
+                {% if post.is_collection(current_user) %}取消收藏{% else %}加入收藏{% endif %}</button>
             {% if post.author == current_user %}
             <button type="button" class="btn btn-outline-secondary btn-sm">
                 <a href="{{ url_for('web.edit_post',post_id=post.id) }}">增加内容</a></button>
@@ -29,7 +30,7 @@
                  <form action="{{ url_for('.delete_post',post_id=post.id) }}" method="post">
                                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                             <button type="submit" onclick="return confirm('确认删除吗？');">删除</button>
-                            </form>
+                 </form>
             {% endif %}
 
             <button type="button" class="btn btn-outline-secondary btn-sm float-right"></button>

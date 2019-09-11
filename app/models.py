@@ -10,7 +10,7 @@ from flask_avatars import Identicon
 from flask_login import UserMixin
 from sqlalchemy.orm import relationship
 from werkzeug.security import generate_password_hash, check_password_hash
-from sqlalchemy import Column, Integer, String, DateTime, Boolean, ForeignKey, Text
+from sqlalchemy import Column, Integer, String, DateTime, Boolean, ForeignKey, Text, SmallInteger
 
 from app import db, login_manager
 
@@ -45,10 +45,14 @@ class User(UserMixin, db.Model):
     followers=db.relationship('Follow', back_populates='followed',
                               foreign_keys=[Follow.followed_id], lazy='dynamic', cascade='all')
 
+    role = db.relationship('Role',back_populates='users')
+    role_id = db.Column(db.Integer,db.ForeignKey('role.id'))
+
     def __init__(self, **kwargs):
         super(User, self).__init__(**kwargs)
         self.generate_avatar()
         self.follow(self)
+        self.role_id = 3
 
     @property
     def password(self):
@@ -93,16 +97,39 @@ class User(UserMixin, db.Model):
     def is_followed_by(self,user):
         return self.followers.filter_by(follower_id=user.id).first() is not None
 
+
+    @property
+    def posts_count(self):
+        return self.posts.count()
+
     def keys(self):
-        return ['id', 'email', 'username', 'location','bio']
+        return ['id', 'email', 'username', 'location','bio','member_since','role_id','posts_count']
 
     def __getitem__(self, item):
         return getattr(self,item)
 
+    @property
+    def is_admin(self):
+        return self.role.name == 'Administrator'
+    @property
+    def is_moderator(self):
+        return self.role.name == 'Moderator'
+
+
+class Role(db.Model):
+    id = db.Column(Integer, primary_key=True)
+    name = db.Column(String(30), unique=True)
+    users = db.relationship('User',back_populates='role',lazy='dynamic')
+    def keys(self):
+        return ['id', 'name']
+
+    def __getitem__(self, item):
+        return getattr(self,item)
+
+
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(user_id)
-
 
 class Tag(db.Model):
     id = db.Column(db.Integer,primary_key=True)

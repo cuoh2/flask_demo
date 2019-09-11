@@ -17,7 +17,7 @@ from flask import current_app
 from sqlalchemy.exc import IntegrityError
 
 from app import db
-from app.models import Tag, User, Post, Comment, Collect
+from app.models import Tag, User, Post, Comment, Collect, Role
 from faker import Faker
 fake = Faker("zh_CN")
 
@@ -27,6 +27,50 @@ def fake_tag():
         tag = Tag(name=t)
         db.session.add(tag)
         db.session.commit()
+    return 'Done'
+
+def init_role():
+    role_name = ['超级管理员','管理员','用户','限制用户']
+    for id,name in enumerate(role_name,1):
+        role = Role(id=id,name=name)
+        db.session.add(role)
+    db.session.commit()
+
+def fake_admin():
+    user=User(username='admin',
+              password='qqqqqq',
+              email='517584811@qq.com',
+              location='SZ',
+              bio=fake.sentence(),
+              member_since=fake.date_this_year(),
+              role_id=1
+              )
+    db.session.add(user)
+    db.session.commit()
+    return 'Done'
+
+def fake_moderators(count):
+    for i in range(count):
+        url = 'https://randomuser.me/api/'
+        r = requests.get(url).text
+        data = json.loads(r)
+        username = data['results'][0]['login']['username']
+        password = data['results'][0]['login']['password']
+        email = data['results'][0]['email']
+        location = data['results'][0]['location']['city']
+        user = User(username=username,
+                    password=password,
+                    email=email,
+                    location=location,
+                    bio=fake.sentence(),
+                    member_since=fake.date_this_year(),
+                    role_id=2
+                    )
+        db.session.add(user)
+        try:
+            db.session.commit()
+        except IntegrityError:
+            db.session.rollback()
     return 'Done'
 
 
@@ -44,7 +88,8 @@ def fake_users(count):
                     email=email,
                     location=location,
                     bio=fake.sentence(),
-                    member_since=fake.date_this_year()
+                    member_since=fake.date_this_year(),
+                    role_id=3
                     )
         db.session.add(user)
         try:
@@ -72,7 +117,8 @@ def fake_post(count):
                 post = Post(title=title,content=content)
                 post.tag = Tag.query.get(random.randint(1, Tag.query.count()))
                 post.author = random.choice(User.query.all())
-                post.publish_time =  fake.date_time_between(start_date="-1y", end_date="now", tzinfo=None)
+                post.publish_time = fake.date_time_between(start_date="-1y", end_date="now", tzinfo=None)
+                #post.publish_time = fake.date_time_this_year()
                 db.session.add(post)
                 db.session.commit()
     return 'Done'
@@ -92,8 +138,8 @@ def fake_comment(count):
 def fake_collect(count):
     for i in range(count):
         collect = Collect(
-            #user=random.choice(User.query.all()),
-            user=User.query.get(31),
+            user=random.choice(User.query.all()),
+            #user=User.query.get(31),
             post=random.choice(Post.query.all()),
             time=fake.date_this_year()
         )
@@ -105,12 +151,15 @@ def fake_collect(count):
 
 def async_fake_user(app,count):
     with app.app_context():
+        fake_moderators(2)
         fake_users(count)
 
 def fake_data():
     # print('开始填充Tag...')
     # fake_tag()
-    #
+    # init_role()
+    # print('开始填充管理员...')
+    # fake_admin()
     # print('开始填充用户...')
     # t1=time.time()
     # app=current_app._get_current_object()
@@ -129,13 +178,13 @@ def fake_data():
     # print(t2-t1)
     #
     # print('开始填充关注...')
-    # fake_follows(200)
+    # fake_follows(50)
 
     print('开始填充帖子...')
     fake_post(2)
 
     print('开始填充评论...')
-    fake_comment(100)
+    fake_comment(200)
 
     print('开始填充收藏...')
-    fake_collect(20)
+    #fake_collect(20)

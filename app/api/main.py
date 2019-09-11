@@ -19,7 +19,9 @@ def post(post_id):
 
 @api.route('/posts')
 def posts():
-    posts = Post.query.order_by(Post.id).all()
+    #posts = Post.query.order_by(Post.id).all()
+    posts =Post.query.join(Comment).group_by(Post.id).order_by(
+             func.count(Comment.id).desc()).all()
     return jsonify(posts)
 
 @api.route('/comments')

@@ -5,13 +5,15 @@
     file   : __init__.py
 """
 import os
+from datetime import datetime
 
 import click
+from flask_login import current_user
 
 from app.app import Flask
 from app.settings import config
 from app.extensions import bootstrap, db, login_manager, avatars, \
-    dropzone, pagedown, mail, moment,csrf
+    dropzone, pagedown, mail, moment,csrf#,socketio
 from fake import fake_data
 
 
@@ -26,6 +28,8 @@ def create_app(config_name=None):
     register_blueprint(app)
     register_extensions(app)
     register_shell_context(app)
+    register_template_context(app)
+
 
     return app
 
@@ -34,8 +38,10 @@ def create_app(config_name=None):
 def register_blueprint(app):
     from app.web import web
     from app.api import api
+    from app.web.admin import admin
     app.register_blueprint(web)
     app.register_blueprint(api,url_prefix='/api')
+    app.register_blueprint(admin,url_prefix='/admin')
 
 
 def register_extensions(app):
@@ -50,8 +56,16 @@ def register_extensions(app):
     mail.init_app(app)
     moment.init_app(app)
     csrf.init_app(app)
+    #socketio.init_app(app)
 
 
+def register_template_context(app):
+    @app.context_processor
+    def make_template_context():
+        from app.models import Post
+        hot_posts=[p for p in Post.query.all() if (datetime.now() - p.publish_time).days == 0]
+        hot_posts.sort(key=lambda x: x.comments.count(), reverse=True)
+        return {'hot_posts':hot_posts}
 
 
 def register_shell_context(app):

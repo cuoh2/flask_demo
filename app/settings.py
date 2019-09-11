@@ -20,6 +20,7 @@ class BaseConfig(object):
     SECRET_KEY = os.getenv('SECRET_KEY','dev key')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     POST_PER_PAGE = 10
+    SQLALCHEMY_ECHO=True
 
     BLUELOG_EMAIL=os.getenv('BLUELOG_EMAIL')
 

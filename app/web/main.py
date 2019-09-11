@@ -6,9 +6,10 @@
 """
 import re
 
-from sqlalchemy import func, desc
+#from flask_socketio import emit
+from sqlalchemy import func, or_
 
-from app.utils import redirect_back
+#from app import socketio
 from . import web
 from flask import render_template, request, url_for, redirect, flash, make_response, jsonify, send_from_directory, \
     current_app, Response
@@ -22,7 +23,7 @@ import json
 
 
 
-@web.route('/',methods=['GET'])
+@web.route('/')
 # @cache.cached(timeout=60*2)
 def index():
     per_page = current_app.config['POST_PER_PAGE']
@@ -34,25 +35,34 @@ def index():
     else:
         tag = request.cookies.get('tag','all')
     t = Tag.query.filter_by(name=tag).first()
-    hot_posts = [p for p in Post.query.all() if (datetime.now() - p.publish_time).days == 0]
-    hot_posts.sort(key=lambda x: x.comments.count(), reverse=True)
+
     if tag == 'all':
+        #按发帖和评论的最新时间排序
         pagination = Post.query.join(Comment,isouter=True).group_by(Post.id).order_by(
               Post.publish_time.desc(),Comment.publish_time.desc()).paginate(page,per_page)
     elif tag == 'hot':
         pagination = Post.query.join(Comment).group_by(Post.id).order_by(
-             func.count(Comment.id).desc(),Comment.publish_time.desc()).paginate(page,per_page)
+             func.count(Comment.id).desc(),Comment.publish_time).paginate(page,per_page)
     else:
         pagination = Post.query.filter_by(tag_id=t.id).join(Comment).group_by(Post.id).order_by(
               Post.publish_time.desc(),Comment.publish_time.desc()).paginate(page,per_page)
     posts = pagination.items
-    return render_template('index.html',tags=tags,tag=tag,posts=posts,hot_posts=hot_posts,pagination=pagination, user=current_user)
+    return render_template('index.html',tags=tags,tag=tag,posts=posts,pagination=pagination, user=current_user)
 
 def index_cookie(tag):
     resp = make_response(redirect(url_for('web.index',tag=tag)))
     resp.set_cookie('tag',tag,max_age=24*60*60)
     return resp
 
+
+@web.route('/search')
+def search():
+    word = request.args.get('word')
+    word='%'+word.strip()+'%'
+    posts=Post.query.join(User).filter(or_(Post.title.like(word))).order_by(
+        Post.publish_time.desc()).all()
+    search_user = User.query.filter(User.username.like(word)).all()
+    return render_template('search.html',posts=posts,search_user=search_user,user=current_user)
 
 def content_clean(c):
     exts = ['markdown.extensions.extra', 'markdown.extensions.codehilite', 'markdown.extensions.tables',
@@ -179,3 +189,19 @@ def edit_post(post_id):
         db.session.commit()
         return jsonify({'result':'ok','post_id':post.id})
     return render_template('post_edit.html',tags=tags,hot_tags=hot_tags,post=post)
+
+#
+# online_users=[]
+# @socketio.on('connect')
+# def connect():
+#     global online_users
+#     if current_user.is_authenticated and current_user.id not in online_users:
+#         online_users.append(current_user.id)
+#     emit('user online',{'count':len(online_users)},broadcast=True)
+#
+# @socketio.on('disconnect')
+# def disconnect():
+#     global online_users
+#     if current_user.is_authenticated and current_user.id in online_users:
+#         online_users.remove(current_user.id)
+#     emit('user online',{'count':len(online_users)},broadcast=True)

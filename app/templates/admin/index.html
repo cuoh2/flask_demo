@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% from 'bootstrap/pagination.html' import render_pagination %}
+
+{% block left_main %}
+<div class="card">
+<ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <ul class="nav" id="post-type">
+               <li class="nav-item">
+                  <a href="{{ url_for('admin.index') }}"
+                       class="btn btn-{% if info=='index' %}dark{% else %}light{% endif %} btn-sm"
+                       tabindex="-1" role="button" style="margin-right: 10px;
+                            {% if tag=='all' %}color: #ffffff !important;{% endif %}">统计</a>
+                 </li>
+                <li class="nav-item">
+                  <a href="{{ url_for('admin.users') }}"
+                       class="btn btn-{% if info=='users'  %}dark{% else %}light{% endif %} btn-sm"
+                       tabindex="-1" role="button" style="margin-right: 10px;
+                            {% if tag=='all' %}color: #ffffff !important;{% endif %}">用户管理</a>
+                 </li>
+
+                <li class="nav-item">
+                  <a href="{{ url_for('admin.posts') }}"
+                       class="btn btn-{% if info=='posts' %}dark{% else %}light{% endif %} btn-sm"
+                       tabindex="-1" role="button" style="margin-right: 10px;
+                            {% if tag=='hot' %}color: #ffffff !important;{% endif %}">帖子管理</a>
+                  </li>
+
+            </ul>
+        </li>
+
+{% if info =='index' %}
+        <li class="list-group-item">
+             <div class="row">
+                  <div class="col-4">
+                   <span class="post-info">总用户数</span>
+                 </div>
+                 <div class="col-4">
+                   <span class="post-info">今日注册</span>
+                 </div>
+                 <div class="col-4">
+                   <span class="post-info">在线人数</span>
+                 </div>
+
+             </div>
+         </li>
+     <li class="list-group-item">
+             <div class="row">
+
+
+                  <div class="col-4">
+                      <a href="{{ url_for('admin.users') }}">{{ user_count }}</a>
+                 </div>
+
+                 <div class="col-4">
+                   <a href="{{ url_for('admin.users') }}">{{ new_user }}</a>
+                 </div>
+
+                 <div class="col-4">
+                   <span id="user-count">88</span>
+                 </div>
+
+             </div>
+         </li>
+
+        <li class="list-group-item">
+             <div class="row">
+                  <div class="col-4">
+                   <span class="post-info">发帖总数</span>
+                 </div>
+                 <div class="col-4">
+                   <span class="post-info">今日新增</span>
+                 </div>
+                 <div class="col-4">
+                   <span class="post-info">在线人数</span>
+                 </div>
+
+             </div>
+         </li>
+     <li class="list-group-item">
+             <div class="row">
+                  <div class="col-4">
+                   <a href="{{ url_for('admin.posts') }}">{{ post_count }}</a>
+                 </div>
+                 <div class="col-4">
+                   <a href="{{ url_for('admin.posts') }}">{{ new_posts }}</a>
+                 </div>
+                 <div class="col-4">
+                   <span class="post-info"></span>
+                 </div>
+
+             </div>
+         </li>
+{% endif %}
+    </ul>
+</div>
+{% endblock %}
+
+
+{% block right_main %}
+    {% if current_user.is_authenticated %}
+    {% include 'right_user_card.html' %}
+    {% endif %}
+    {% include 'star_node.html' %}
+    {% include 'right_hot_post.html' %}
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+{#    <script type="text/javascript">#}
+{#        namespace = '/admin';#}
+{#        var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port + namespace);#}
+{#        socket.on('user count',function(data){#}
+{#            alert('ok!');#}
+{#            $('#user-count').html(data.count);#}
+{#        });#}
+{##}
+{#    </script>#}
+
+
+{% endblock %}

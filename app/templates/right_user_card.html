@@ -18,7 +18,7 @@
                     </div>
                     <div class="col-4">
                         {% if current_user == user %}
-                        <a href="{{ url_for('web.edit_profile',user_id=current_user.id) }}">账号设置</a>
+                        <a href="{{ url_for('web.edit_profile',user_id=current_user.id) }}">资料修改</a>
                         {% else %}
                         {{ follow_area(user) }}
                         {% endif %}
@@ -62,7 +62,7 @@
         <li class="list-group-item">
             <div class="row">
                 <div class="col-6" style="padding-top: 6px;">
-                    <a href="#">0条未读提醒</a>
+                    <a href="#">2条未读提醒</a>
                 </div>
                 <div class="col-6">
 {#                    <p class="text-right">#}
@@ -76,7 +76,7 @@
             <li class="list-group-item">
             <div class="row">
                 <div class="col-6" style="padding-top: 6px;">
-                    <a href="{{ url_for('.show_collects',user_id=user.id) }}">我的收藏</a>
+                    <a href="{{ url_for('web.show_collects',user_id=user.id) }}">我的收藏</a>
                 </div>
                 <div class="col-6">
                     <p class="text-right" ><span class="badge badge-pill badge-info" id="collect_count">
@@ -89,7 +89,18 @@
             <li class="list-group-item">
             <div class="row">
                 <div  class="col-12" style="font-size: 13px;" >
-                    简介：{{ user.bio or'暂无' }}
+                     <span class="post-info">简介：{{ user.bio or'暂无' }}</span>
+                </div>
+
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-6" style="font-size: 16px;" >
+                    <span class="post-info">城市：</span>
+                </div>
+                <div class="col-6">
+                    <p class="text-right"><span class="post-info"  style="font-size: 13px;">{{ user.location or'未设置' }}</span></p>
                 </div>
 
             </div>
@@ -97,21 +108,10 @@
         <li class="list-group-item">
             <div class="row">
                 <div class="col-6" style="font-size: 13px;" >
-                    城市：
+                    <span class="post-info">注册日期</span>
                 </div>
                 <div class="col-6">
-                    <p class="text-right" style="font-size: 13px;">{{ user.location or'未设置' }}</p>
-                </div>
-
-            </div>
-        </li>
-        <li class="list-group-item">
-            <div class="row">
-                <div class="col-6" style="font-size: 13px;" >
-                    注册日期
-                </div>
-                <div class="col-6">
-                    <p class="text-right" style="font-size: 13px;">{{ moment( user.member_since ).format('LL') }}</p>
+                    <p class="text-right" ><span class="post-info"  style="font-size: 13px;">{{ moment( user.member_since ).format('LL') }}</span></p>
                 </div>
             </div>
         </li>

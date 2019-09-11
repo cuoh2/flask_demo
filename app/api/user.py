@@ -5,8 +5,10 @@
     file   : user.py
 """
 from flask import jsonify
+from sqlalchemy import func
 
-from app.models import User
+from app import db
+from app.models import User, Role, Post
 from . import api
 
 
@@ -17,5 +19,14 @@ def user(user_id):
 
 @api.route('/users')
 def users():
-    users = User.query.all()
+    #users = User.query.all()
+    users=db.session.query(User).outerjoin(Post,Post.author_id==User.id).group_by(User.id).order_by(
+        func.count(Post.id).desc()).all()
+
+
     return jsonify(users)
+
+@api.route('/roles')
+def role_map():
+    role = Role.query.all()
+    return jsonify(role)
