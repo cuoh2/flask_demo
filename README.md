@@ -30,7 +30,7 @@
 
 ##### 首页
 
-##### ![](C:\Users\Administrator\Pictures\index.png)
+##### ![](/share/index.png)
 
 
 
@@ -38,21 +38,21 @@
 
 
 
-##### ![](https://github.com/cuoh2/flask_demo/share/post.jpg)
+##### ![](/share/post.jpg)
 
 
 
 ##### 登录
 
-![](https://github.com/cuoh2/flask_demo/share/login.jpg)
+![](/share/login.jpg)
 
-![login2](https://github.com/cuoh2/flask_demo/share/login2.png)
+![login2](/share/login2.png)
 
 ##### 资料修改页
 
 
 
-![](https://github.com/cuoh2/flask_demo/share/user.jpg)
+![](/share/user.jpg)
 
 
 
@@ -60,7 +60,7 @@
 
 
 
-![](https://github.com/cuoh2/flask_demo/share/admin.jpg)
+![](/share/admin.jpg)
 
 
 
@@ -68,7 +68,7 @@
 
 
 
-![](https://github.com/cuoh2/flask_demo/share/search.jpg)
+![](/share/search.jpg)
 
 
 
