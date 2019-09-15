@@ -117,8 +117,8 @@ def fake_post(count):
                 post = Post(title=title,content=content)
                 post.tag = Tag.query.get(random.randint(1, Tag.query.count()))
                 post.author = random.choice(User.query.all())
-                #post.publish_time = fake.date_time_between(start_date="-1y", end_date="now", tzinfo=None)
-                post.publish_time = fake.date_time_this_year()
+                post.publish_time = fake.date_time_between(start_date="-1d", end_date="now", tzinfo=None)
+                #post.publish_time = fake.date_time_this_year()
                 db.session.add(post)
                 db.session.commit()
     return 'Done'
@@ -155,36 +155,36 @@ def async_fake_user(app,count):
         fake_users(count)
 
 def fake_data():
-    print('开始填充Tag...')
-    fake_tag()
-    init_role()
-    print('开始填充管理员...')
-    fake_admin()
-    print('开始填充用户...')
-    t1=time.time()
-    app=current_app._get_current_object()
-    thr=[]
-    for i in range(3):
-        t = threading.Thread(target=async_fake_user,args=(app,10))
-        thr.append(t)
+    # print('开始填充Tag...')
+    # fake_tag()
+    # init_role()
+    # print('开始填充管理员...')
+    # fake_admin()
+    # print('开始填充用户...')
+    # t1=time.time()
+    # app=current_app._get_current_object()
+    # thr=[]
+    # for i in range(3):
+    #     t = threading.Thread(target=async_fake_user,args=(app,10))
+    #     thr.append(t)
+    #
+    # for t in thr:
+    #     t.start()
+    #     print(t.name+'正在进行...')
+    #
+    # for t in thr:
+    #     t.join()
+    # t2=time.time()
+    # print(t2-t1)
+    #
+    # print('开始填充关注...')
+    # fake_follows(50)
 
-    for t in thr:
-        t.start()
-        print(t.name+'正在进行...')
-
-    for t in thr:
-        t.join()
-    t2=time.time()
-    print(t2-t1)
-
-    print('开始填充关注...')
-    fake_follows(50)
-
-    print('开始填充帖子...')
-    fake_post(2)
+    # print('开始填充帖子...')
+    # fake_post(2)
 
     print('开始填充评论...')
-    fake_comment(200)
+    fake_comment(1000)
 
-    print('开始填充收藏...')
-    fake_collect(20)
+    # print('开始填充收藏...')
+    # fake_collect(20)

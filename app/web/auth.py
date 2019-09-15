@@ -32,6 +32,9 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
+        if not user.password_hash:
+            flash('该账号为第三方登录账号，请重新登录', 'warning')
+            return redirect(url_for('.login'))
         if user and user.verify_password(form.password.data):
             login_user(user)
             return redirect(request.args.get('next') or url_for('web.index'))
