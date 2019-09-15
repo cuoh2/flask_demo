@@ -12,6 +12,8 @@ blean = "*"
 bleach = "*"
 markdown = "*"
 email = "*"
+flask-socketio = "*"
+flask-oauthlib = "*"
 
 [requires]
 python_version = "3.7"

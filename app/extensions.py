@@ -14,7 +14,9 @@ from flask_pagedown import PageDown
 from flask_cache import Cache
 from flask_mail import Mail
 from flask_wtf import CSRFProtect
-#from flask_socketio import SocketIO
+from flask_socketio import SocketIO
+from flask_oauthlib.client import OAuth
+
 
 bootstrap = Bootstrap()
 db = SQLAlchemy()
@@ -26,7 +28,8 @@ pagedown = PageDown()
 mail = Mail()
 moment = Moment()
 csrf = CSRFProtect()
-#socketio = SocketIO()
+socketio = SocketIO()
+oauth = OAuth()
 
 login_manager.login_view = 'web.login'
 login_manager.login_message_category = 'warning'

@@ -3,473 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="e34509f7-a5a0-46ea-97d9-d4d0a77d87f8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/extensions.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/extensions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/forms/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/base.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/admin/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/macros.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/macros.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/post.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/right_user_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/right_user_card.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/star_node.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/user_collect_posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user_collect_posts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/user_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user_login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/user_register.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user_register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/web/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/web/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/web/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/web/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/user_read_messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user_read_messages.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/web/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/web/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/web/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/web/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data-dev.db" beforeDir="false" afterPath="$PROJECT_DIR$/data-dev.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fake.py" beforeDir="false" afterPath="$PROJECT_DIR$/fake.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/314456537b5e4b4d96e2aebdcffa1d97_raw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/None_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/None_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/None_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/admin_l.png" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/avatars/admin_l.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/admin_m.png" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/avatars/admin_m.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/admin_s.png" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/avatars/admin_s.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/angrybear390_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/angrybear390_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/angrybear390_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/angrybear901_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/angrybear901_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/angrybear901_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/angryelephant848_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/angryelephant848_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/angryelephant848_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/angryrabbit922_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/angryrabbit922_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/angryrabbit922_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/asd111_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/asd111_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/asd111_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/beautifulelephant297_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/beautifulelephant297_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/beautifulelephant297_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/beautifulgoose629_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/beautifulgoose629_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/beautifulgoose629_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/beautifullion376_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/beautifullion376_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/beautifullion376_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/beautifulmouse774_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/beautifulmouse774_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/beautifulmouse774_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/beautifulwolf236_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/beautifulwolf236_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/beautifulwolf236_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/beautifulzebra994_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/beautifulzebra994_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/beautifulzebra994_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigladybug856_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigladybug856_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigladybug856_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigleopard973_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigleopard973_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigleopard973_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigmouse154_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigmouse154_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigmouse154_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigrabbit428_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigrabbit428_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigrabbit428_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigzebra677_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigzebra677_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bigzebra677_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/blacksnake525_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/blacksnake525_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/blacksnake525_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/blackzebra424_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/blackzebra424_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/blackzebra424_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluebear735_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluebear735_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluebear735_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluebird522_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluebird522_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluebird522_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/blueduck941_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/blueduck941_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/blueduck941_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluefish321_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluefish321_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluefish321_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluegoose751_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluegoose751_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluegoose751_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluelion302_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluelion302_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluelion302_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluelion625_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluelion625_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluelion625_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluemeercat134_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluemeercat134_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluemeercat134_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluemeercat900_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluemeercat900_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluemeercat900_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluemouse755_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluemouse755_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluemouse755_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluepanda278_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluepanda278_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluepanda278_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluepeacock318_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluepeacock318_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluepeacock318_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluesnake143_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluesnake143_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/bluesnake143_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownbear484_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownbear484_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownbear484_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownfrog709_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownfrog709_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownfrog709_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/browngorilla620_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/browngorilla620_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/browngorilla620_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownkoala601_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownkoala601_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownkoala601_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownladybug631_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownladybug631_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownladybug631_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownpanda800_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownpanda800_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownpanda800_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownsnake789_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownsnake789_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownsnake789_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/browntiger584_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/browntiger584_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/browntiger584_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownwolf894_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownwolf894_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/brownwolf894_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazydog930_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazydog930_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazydog930_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazyfish115_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazyfish115_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazyfish115_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazyfrog277_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazyfrog277_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazyfrog277_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazygoose927_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazygoose927_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazygoose927_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazygorilla527_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazygorilla527_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazygorilla527_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazyleopard157_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazyleopard157_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazyleopard157_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazywolf446_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazywolf446_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/crazywolf446_s.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/uploads/avatars/cuohoh_l.png" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/avatars/cuohoh_l.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uploads/avatars/cuohoh_m.png" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/avatars/cuohoh_m.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uploads/avatars/cuohoh_s.png" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/avatars/cuohoh_s.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/dsdxcc_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/dsdxcc_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/dsdxcc_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/f76d647815c54b18a9de013f508041a6_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/f76d647815c54b18a9de013f508041a6_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/f76d647815c54b18a9de013f508041a6_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenbear322_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenbear322_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenbear322_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenbird132_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenbird132_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenbird132_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenbird186_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenbird186_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenbird186_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenfrog861_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenfrog861_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenfrog861_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenostrich201_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenostrich201_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/goldenostrich201_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenbutterfly210_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenbutterfly210_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenbutterfly210_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenduck131_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenduck131_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenduck131_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenfish382_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenfish382_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenfish382_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greengoose910_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greengoose910_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greengoose910_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenmeercat578_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenmeercat578_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenmeercat578_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenostrich520_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenostrich520_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenostrich520_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenrabbit199_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenrabbit199_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greenrabbit199_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greensnake528_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greensnake528_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/greensnake528_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/happybutterfly505_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/happybutterfly505_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/happybutterfly505_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/happygorilla535_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/happygorilla535_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/happygorilla535_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/happylion389_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/happylion389_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/happylion389_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/happyrabbit699_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/happyrabbit699_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/happyrabbit699_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/happysnake174_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/happysnake174_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/happysnake174_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavyfrog215_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavyfrog215_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavyfrog215_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavyleopard156_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavyleopard156_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavyleopard156_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavypeacock520_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavypeacock520_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavypeacock520_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavytiger678_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavytiger678_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavytiger678_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavywolf356_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavywolf356_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/heavywolf356_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazycat666_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazycat666_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazycat666_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazyelephant797_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazyelephant797_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazyelephant797_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazygorilla121_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazygorilla121_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazygorilla121_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazykoala482_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazykoala482_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazykoala482_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazymeercat642_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazymeercat642_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazymeercat642_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazyrabbit591_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazyrabbit591_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazyrabbit591_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazysnake934_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazysnake934_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazysnake934_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazyswan714_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazyswan714_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazyswan714_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazyzebra823_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazyzebra823_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/lazyzebra823_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangebear473_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangebear473_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangebear473_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangebear910_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangebear910_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangebear910_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangegoose321_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangegoose321_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangegoose321_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangemeercat986_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangemeercat986_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangemeercat986_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangemouse548_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangemouse548_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangemouse548_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangepanda696_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangepanda696_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangepanda696_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangesnake734_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangesnake734_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/orangesnake734_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicdog682_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicdog682_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicdog682_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicelephant432_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicelephant432_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicelephant432_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicelephant562_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicelephant562_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicelephant562_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicelephant739_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicelephant739_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicelephant739_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicelephant872_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicelephant872_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicelephant872_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicfrog909_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicfrog909_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicfrog909_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicsnake950_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicsnake950_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organicsnake950_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organictiger969_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organictiger969_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/organictiger969_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purpledog526_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purpledog526_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purpledog526_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplefish622_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplefish622_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplefish622_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplegoose790_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplegoose790_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplegoose790_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplegorilla264_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplegorilla264_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplegorilla264_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplemouse571_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplemouse571_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplemouse571_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplepanda329_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplepanda329_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purplepanda329_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purpleswan102_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purpleswan102_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purpleswan102_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purpletiger840_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purpletiger840_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/purpletiger840_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/redelephant356_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/redelephant356_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/redelephant356_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/redfrog877_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/redfrog877_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/redfrog877_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/redgoose449_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/redgoose449_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/redgoose449_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/redlion597_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/redlion597_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/redlion597_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/redmeercat219_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/redmeercat219_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/redmeercat219_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/redrabbit842_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/redrabbit842_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/redrabbit842_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadbutterfly962_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadbutterfly962_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadbutterfly962_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadfrog690_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadfrog690_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadfrog690_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadfrog775_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadfrog775_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadfrog775_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadpanda889_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadpanda889_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadpanda889_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadrabbit871_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadrabbit871_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadrabbit871_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadswan923_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadswan923_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadswan923_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadtiger845_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadtiger845_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/sadtiger845_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverbird123_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverbird123_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverbird123_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverdog333_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverdog333_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverdog333_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silvergoose115_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silvergoose115_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silvergoose115_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silvergoose377_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silvergoose377_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silvergoose377_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverleopard210_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverleopard210_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverleopard210_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverlion636_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverlion636_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverlion636_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverostrich889_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverostrich889_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverostrich889_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverpanda264_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverpanda264_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/silverpanda264_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/smallgorilla567_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/smallgorilla567_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/smallgorilla567_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/smallrabbit330_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/smallrabbit330_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/smallrabbit330_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/ticklishbear388_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/ticklishbear388_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/ticklishbear388_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/ticklishbird471_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/ticklishbird471_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/ticklishbird471_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/ticklishswan899_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/ticklishswan899_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/ticklishswan899_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/tinydog608_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/tinydog608_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/tinydog608_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/tinygorilla498_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/tinygorilla498_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/tinygorilla498_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/tinymouse811_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/tinymouse811_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/tinymouse811_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/tinypeacock390_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/tinypeacock390_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/tinypeacock390_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/whitedog655_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/whitedog655_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/whitedog655_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/whiteelephant879_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/whiteelephant879_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/whiteelephant879_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/whitekoala968_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/whitekoala968_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/whitekoala968_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/whiteleopard840_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/whiteleopard840_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/whiteleopard840_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/whitelion673_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/whitelion673_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/whitelion673_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/whiteswan691_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/whiteswan691_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/whiteswan691_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/yellowrabbit326_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/yellowrabbit326_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/yellowrabbit326_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/yellowrabbit892_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/yellowrabbit892_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/yellowrabbit892_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/yellowsnake314_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/yellowsnake314_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/yellowsnake314_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/yellowswan336_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/yellowswan336_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/avatars/yellowswan336_s.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -517,22 +63,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/web/main.py">
+        <entry file="file://$PROJECT_DIR$/app/templates/post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="222" column="1" lean-forward="true" selection-start-line="222" selection-start-column="1" selection-end-line="222" selection-end-column="1" />
-              <folding>
-                <element signature="e#108#117#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="234">
+              <caret line="49" column="215" lean-forward="true" selection-start-line="49" selection-start-column="98" selection-end-line="49" selection-end-column="215" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/post.html">
+        <entry file="file://$PROJECT_DIR$/app/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-19">
-              <caret line="100" column="53" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="53" />
+            <state relative-caret-position="-900">
+              <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -540,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="68" column="91" lean-forward="true" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="91" />
+            <state relative-caret-position="90">
+              <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
               <folding>
                 <element signature="e#113#122#0" expanded="true" />
               </folding>
@@ -550,66 +93,72 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/right_user_card.html">
+        <entry file="file://$PROJECT_DIR$/app/web/auth.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="71" column="40" lean-forward="true" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="-271">
+              <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+              <folding>
+                <element signature="e#109#177#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/static/js/base.js">
+        <entry file="file://$PROJECT_DIR$/app/web/oauth.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/static/js/jquery-3.2.1.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="-106">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#111#145#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/index.html">
+        <entry file="file://$PROJECT_DIR$/app/settings.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="98">
+              <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+              <folding>
+                <element signature="e#110#152#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/user_collect_posts.html">
+        <entry file="file://$PROJECT_DIR$/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="601">
-              <caret line="56" column="6" lean-forward="true" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="6" />
+            <state relative-caret-position="-846">
+              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/user_read_messages.html">
+        <entry file="file://$PROJECT_DIR$/app/web/user.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="31" column="68" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
+            <state relative-caret-position="36">
+              <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+              <folding>
+                <element signature="e#109#118#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/user_login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="68" column="90" selection-start-line="68" selection-start-column="77" selection-end-line="68" selection-end-column="90" />
             </state>
           </provider>
         </entry>
@@ -619,9 +168,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -634,13 +183,13 @@
       <find>boo</find>
       <find>main</find>
       <find>count</find>
-      <find>user-count</find>
       <find>user_count</find>
       <find>filter</find>
       <find>rule</find>
       <find>alert</find>
       <find>a</find>
       <find>@</find>
+      <find>user-count</find>
     </findStrings>
     <replaceStrings>
       <replace>web.</replace>
@@ -654,7 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/templates/right_user_info.html" />
         <option value="$PROJECT_DIR$/app/templates/new_post.html" />
         <option value="$PROJECT_DIR$/ttt.py" />
         <option value="$PROJECT_DIR$/app/templates/user_followers.html" />
@@ -678,33 +226,34 @@
         <option value="$PROJECT_DIR$/app/templates/admin/users.html" />
         <option value="$PROJECT_DIR$/app/templates/search.html" />
         <option value="$PROJECT_DIR$/app/web/auth.py" />
-        <option value="$PROJECT_DIR$/app/templates/user_login.html" />
         <option value="$PROJECT_DIR$/app/forms/auth.py" />
-        <option value="$PROJECT_DIR$/app/extensions.py" />
         <option value="$PROJECT_DIR$/app/templates/user.html" />
         <option value="$PROJECT_DIR$/app/templates/macros.html" />
         <option value="$PROJECT_DIR$/app/settings.py" />
         <option value="$PROJECT_DIR$/app/utils.py" />
         <option value="$PROJECT_DIR$/app/web/admin.py" />
         <option value="$PROJECT_DIR$/app/templates/user_register.html" />
-        <option value="$PROJECT_DIR$/app/templates/admin/index.html" />
         <option value="$PROJECT_DIR$/app/decorators.py" />
         <option value="$PROJECT_DIR$/run.py" />
         <option value="$PROJECT_DIR$/fake.py" />
         <option value="$PROJECT_DIR$/app/web/user.py" />
         <option value="$PROJECT_DIR$/app/templates/user_collect_posts.html" />
         <option value="$PROJECT_DIR$/app/models.py" />
-        <option value="$PROJECT_DIR$/app/__init__.py" />
-        <option value="$PROJECT_DIR$/app/templates/user_read_messages.html" />
         <option value="$PROJECT_DIR$/app/templates/post.html" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/654f5e10-0af5-44d8-80c8-7335bdc9ed79/console.sql" />
-        <option value="$PROJECT_DIR$/app/web/main.py" />
         <option value="$PROJECT_DIR$/app/templates/index.html" />
         <option value="$PROJECT_DIR$/app/static/js/base.min.js" />
         <option value="$PROJECT_DIR$/app/static/js/base.js" />
-        <option value="$PROJECT_DIR$/app/templates/base.html" />
+        <option value="$PROJECT_DIR$/app/templates/user_read_messages.html" />
         <option value="$PROJECT_DIR$/app/templates/right_user_card.html" />
+        <option value="$PROJECT_DIR$/app/templates/admin/index.html" />
+        <option value="$PROJECT_DIR$/app/templates/base.html" />
+        <option value="$PROJECT_DIR$/app/web/main.py" />
+        <option value="$PROJECT_DIR$/app/extensions.py" />
+        <option value="$PROJECT_DIR$/app/__init__.py" />
+        <option value="$PROJECT_DIR$/app/templates/user_login.html" />
+        <option value="$PROJECT_DIR$/app/web/oauth.py" />
       </list>
     </option>
   </component>
@@ -764,6 +313,13 @@
               <item name="demo2" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo2" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo2" type="b2602c69:ProjectViewProjectNode" />
@@ -906,12 +462,12 @@
       <workItem from="1567908575657" duration="62945000" />
       <workItem from="1568047230622" duration="67465000" />
       <workItem from="1568256476434" duration="27660000" />
-      <workItem from="1568466445238" duration="9710000" />
+      <workItem from="1568466445238" duration="23784000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="342909000" />
+    <option name="totallyTimeSpent" value="356983000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -926,7 +482,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20121029" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20121029" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -937,8 +493,8 @@
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32569557" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.39443535" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49950835" weight="0.3371522" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.32242227" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49950835" weight="0.29623568" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4826923" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.3289689" />
@@ -956,54 +512,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/demo2$populate.coverage" NAME="populate Coverage Results" MODIFIED="1567325439580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/demo2$ttt.coverage" NAME="ttt Coverage Results" MODIFIED="1567695990700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/demo2$run.coverage" NAME="run Coverage Results" MODIFIED="1568473357893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/demo2$run.coverage" NAME="run Coverage Results" MODIFIED="1568522191239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/static/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="112" column="21" selection-start-line="112" selection-start-column="21" selection-end-line="112" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/user_login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-613">
-          <caret line="23" column="70" lean-forward="true" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1853">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2010">
-          <caret line="1282" selection-start-line="1282" selection-end-line="1282" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="e#114#123#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/flask_bootstrap/templates/bootstrap/pagination.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="35" selection-start-line="26" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/macros.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1944">
@@ -1044,23 +555,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/admin/users.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/web/auth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
-          <folding>
-            <element signature="e#109#177#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/user_register.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1121,23 +615,6 @@
           <folding>
             <element signature="e#109#143#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
-          <folding>
-            <element signature="e#110#152#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/extensions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1203,16 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/web/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="103" column="15" selection-start-line="103" selection-start-column="15" selection-end-line="103" selection-end-column="15" />
-          <folding>
-            <element signature="e#110#139#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://654f5e10-0af5-44d8-80c8-7335bdc9ed79/schema/main/table/message.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1234,16 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3456">
-          <caret line="200" selection-start-line="200" selection-end-line="200" />
-          <folding>
-            <element signature="e#111#140#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://654f5e10-0af5-44d8-80c8-7335bdc9ed79/schema/main/table/message">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="a5021938-651c-47d2-97ab-6e349a3e191f">
@@ -1261,16 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/web/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1722">
-          <caret line="33" column="104" selection-start-line="33" selection-start-column="104" selection-end-line="33" selection-end-column="104" />
-          <folding>
-            <element signature="e#109#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/user_collect_posts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="601">
@@ -1278,42 +725,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/user_read_messages.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="31" column="68" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/web/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="222" column="1" lean-forward="true" selection-start-line="222" selection-start-column="1" selection-end-line="222" selection-end-column="1" />
-          <folding>
-            <element signature="e#108#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/static/js/moment-with-locales.min.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="100" column="53" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="68" column="91" lean-forward="true" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="91" />
-          <folding>
-            <element signature="e#113#122#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/static/js/base.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1331,31 +744,169 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/js/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/user_read_messages.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-77">
+          <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
+        <state relative-caret-position="1191">
           <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/js/socket.io.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/right_user_card.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="143" column="34" lean-forward="true" selection-start-line="143" selection-start-column="34" selection-end-line="143" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/flask_socketio/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3492">
+          <caret line="713" column="4" selection-start-line="713" selection-start-column="4" selection-end-line="713" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1890">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/web/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3075">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="e#108#117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/extensions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="31" column="5" selection-start-line="31" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="e#115#152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/web/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="22" column="19" selection-start-line="22" selection-end-line="23" />
+          <folding>
+            <element signature="e#110#139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="49" column="215" lean-forward="true" selection-start-line="49" selection-start-column="98" selection-end-line="49" selection-end-column="215" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="-900">
+          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/right_user_card.html">
+    <entry file="file://$USER_HOME$/.virtualenvs/albumy_-r9pNWw9P/Lib/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="71" column="40" lean-forward="true" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
+        <state relative-caret-position="103">
+          <caret line="1948" selection-start-line="1948" selection-end-line="1948" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/js/base.js">
+    <entry file="file://$PROJECT_DIR$/app/templates/user_login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <caret line="68" column="90" selection-start-line="68" selection-start-column="77" selection-end-line="68" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+          <folding>
+            <element signature="e#113#122#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/web/auth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-271">
+          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+          <folding>
+            <element signature="e#109#177#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/settings.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+          <folding>
+            <element signature="e#110#152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/web/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+          <folding>
+            <element signature="e#109#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-846">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/web/oauth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-106">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="e#111#145#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

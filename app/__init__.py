@@ -13,7 +13,7 @@ from flask_login import current_user
 from app.app import Flask
 from app.settings import config
 from app.extensions import bootstrap, db, login_manager, avatars, \
-    dropzone, pagedown, mail, moment,csrf#,socketio
+    dropzone, pagedown, mail, moment,csrf,socketio,oauth
 from fake import fake_data
 
 
@@ -39,9 +39,11 @@ def register_blueprint(app):
     from app.web import web
     from app.api import api
     from app.web.admin import admin
+    from app.web.oauth import oauth_bp
     app.register_blueprint(web)
     app.register_blueprint(api,url_prefix='/api')
     app.register_blueprint(admin,url_prefix='/admin')
+    app.register_blueprint(oauth_bp)
 
 
 def register_extensions(app):
@@ -56,7 +58,8 @@ def register_extensions(app):
     mail.init_app(app)
     moment.init_app(app)
     csrf.init_app(app)
-    #socketio.init_app(app)
+    socketio.init_app(app)
+    oauth.init_app(app)
 
 
 def register_template_context(app):

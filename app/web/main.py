@@ -6,16 +6,15 @@
 """
 import re
 
-#from flask_socketio import emit
+from flask_socketio import emit
 from sqlalchemy import func, or_
 
-#from app import socketio
 from app.decorators import limit_user
 from . import web
 from flask import render_template, request, url_for, redirect, flash, make_response, jsonify, send_from_directory, \
     current_app, Response
 from ..models import Tag, Post, User, Comment, Collect, Message
-from .. import db#, cache
+from .. import db,socketio#, cache
 from flask_login import login_required, current_user
 from datetime import datetime,date
 from markdown import markdown
@@ -38,7 +37,6 @@ def index():
     t = Tag.query.filter_by(name=tag).first()
 
     if tag == 'all':
-        #按发帖和评论的最新时间排序
         pagination = Post.query.join(Comment,isouter=True).group_by(Post.id).order_by(
               Post.publish_time.desc(),Comment.publish_time.desc()).paginate(page,per_page)
     elif tag == 'hot':
@@ -220,18 +218,18 @@ def read_message(user_id):
 def messages_count():
     count=Message.query.filter_by(user=current_user, is_read=False).count()
     return jsonify(count=count)
-#
-# online_users=[]
-# @socketio.on('connect')
-# def connect():
-#     global online_users
-#     if current_user.is_authenticated and current_user.id not in online_users:
-#         online_users.append(current_user.id)
-#     emit('user online',{'count':len(online_users)},broadcast=True)
-#
-# @socketio.on('disconnect')
-# def disconnect():
-#     global online_users
-#     if current_user.is_authenticated and current_user.id in online_users:
-#         online_users.remove(current_user.id)
-#     emit('user online',{'count':len(online_users)},broadcast=True)
+
+online_users=[]
+@socketio.on('connect',namespace='/admin')
+def connect():
+    global online_users
+    if current_user.is_authenticated and current_user.id not in online_users:
+        online_users.append(current_user.id)
+    emit('user online',{'count':len(online_users)},broadcast=True)
+
+@socketio.on('disconnect',namespace='/admin')
+def disconnect():
+    global online_users
+    if current_user.is_authenticated and current_user.id in online_users:
+        online_users.remove(current_user.id)
+    emit('user online',{'count':len(online_users)},broadcast=True)

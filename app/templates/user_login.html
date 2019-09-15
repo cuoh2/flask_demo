@@ -56,12 +56,19 @@
 {#                </div>#}
 {#              </div>#}
               <div class="form-group row">
-                <label for="colFormLabelSm" class="col-2 col-form-label col-form-label text-right"></label>
-                <div class="col-10">
-                  <button type="submit" class="btn btn-secondary btn-sm">登录</button>
-                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <a class="btn btn-light btn-sm" href="{{ url_for('web.forget_password')}}">忘记密码？</a>
-                </div>
+                    <label for="colFormLabelSm" class="col-2 col-form-label col-form-label text-right"></label>
+                    <div class="col-10">
+                      <button type="submit" class="btn btn-secondary btn-sm">登录</button>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <a class="btn btn-light btn-sm" href="{{ url_for('web.forget_password')}}">忘记密码？</a>
+                    </div>
+              </div>
+            <div class="form-group row">
+                    <label for="colFormLabelSm" class="col-2 col-form-label col-form-label text-right">git登录：</label>
+                    <div class="col-10">
+                        <a class="icon" href="{{ url_for('oauth.oauth_login',provider_name='github')}}">
+                            <img src="{{ url_for('static',filename='git.ico') }}" class="rounded"> </a>
+                    </div>
               </div>
             </form>
         </li>
