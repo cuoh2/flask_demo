@@ -117,8 +117,8 @@ def fake_post(count):
                 post = Post(title=title,content=content)
                 post.tag = Tag.query.get(random.randint(1, Tag.query.count()))
                 post.author = random.choice(User.query.all())
-                post.publish_time = fake.date_time_between(start_date="-1y", end_date="now", tzinfo=None)
-                #post.publish_time = fake.date_time_this_year()
+                #post.publish_time = fake.date_time_between(start_date="-1y", end_date="now", tzinfo=None)
+                post.publish_time = fake.date_time_this_year()
                 db.session.add(post)
                 db.session.commit()
     return 'Done'

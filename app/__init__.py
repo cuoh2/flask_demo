@@ -97,9 +97,9 @@ def register_commands(app):
     @app.cli.command()
     def forge():
         """Generate fake data."""
-        #db.drop_all()
+        db.drop_all()
         db.create_all()
-        #fake_data()
+        fake_data()
         click.echo('Done.')
 
 

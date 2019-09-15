@@ -6,6 +6,7 @@
 """
 from flask import Blueprint, abort, url_for, flash, redirect
 from flask_login import current_user, login_user
+from sqlalchemy import or_
 
 from app import oauth, db
 from app.models import User
@@ -47,14 +48,14 @@ def oauth_callback(provider_name):
         flash('连接失败，请重试','warning')
         return redirect(url_for('auth.login'))
     username, github, email, bio=get_social_profile(provider, access_token)
-    user=User.query.filter_by(email=email).first()
+    user=User.query.filter(or_(User.username==username,User.email==email)).all()
     if not user:
         user=User(email=email, username=username, bio=bio)
         db.session.add(user)
         db.session.commit()
-        login_user(user, remember=True)
+        login_user(user)
         return redirect(url_for('web.index'))
-    login_user(user, remember=True)
+    login_user(user)
     return redirect(url_for('web.user'))
 
 profile_endpoints={
