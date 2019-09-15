@@ -10,17 +10,21 @@ from flask import Blueprint
 
 from flask import render_template, request, url_for, redirect, \
     flash, make_response, jsonify, current_app
-from flask_login import current_user
+from flask_login import current_user, login_required
 #from flask_socketio import emit
 from sqlalchemy import func, or_
 
 from app import db#, socketio
+from app.decorators import admin_required
+
 from app.models import User, Post, Role, Comment
 from app.utils import redirect_back
 
 admin = Blueprint('admin',__name__)
 
 @admin.route('/')
+@login_required
+@admin_required
 def index():
     user_count = User.query.count()
     users = User.query.all()
@@ -39,6 +43,8 @@ def index():
                            new_user=new_user,new_posts=new_posts,user=current_user,info='index')
 
 @admin.route('/users')
+@login_required
+@admin_required
 def users():
     per_page=current_app.config['POST_PER_PAGE']
     page=request.args.get('page', type=int, default=1)
@@ -63,6 +69,8 @@ def users():
                            user=current_user,roles=roles,roles2=roles2,info='users')
 
 @admin.route('/posts',methods=['GET','POST'])
+@login_required
+@admin_required
 def posts():
     per_page=current_app.config['POST_PER_PAGE']
     page=request.args.get('page', type=int, default=1)
@@ -81,6 +89,8 @@ def posts():
     return render_template('admin/posts.html',posts=posts,pagination=pagination,user=current_user,info='posts')
 
 @admin.route('/posts/delete',methods=['GET','POST'])
+@login_required
+@admin_required
 def delete_post():
     ids = request.form.getlist('id_list')
     for id in ids:
@@ -90,6 +100,8 @@ def delete_post():
     return redirect_back()
 
 @admin.route('/user/role',methods=['GET','POST'])
+@login_required
+@admin_required
 def set_role():
     user_id = request.form.get('user_id')
     user = User.query.get(user_id)

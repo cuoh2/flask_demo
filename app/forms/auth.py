@@ -12,7 +12,7 @@ from app.models import User
 
 
 class Forget_passwordForm(FlaskForm):
-    email = StringField('邮箱',validators=[DataRequired(message='邮箱未填写'),Length(1,64),Email()])
+    email = StringField('邮箱',validators=[DataRequired(message='邮箱未填写'),Length(1,64),Email(message='请输入正确邮箱地址')])
     submit = SubmitField('提交')
 
     def validate_email(self, field):

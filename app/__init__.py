@@ -62,10 +62,14 @@ def register_extensions(app):
 def register_template_context(app):
     @app.context_processor
     def make_template_context():
-        from app.models import Post
+        from app.models import Post,Message
         hot_posts=[p for p in Post.query.all() if (datetime.now() - p.publish_time).days == 0]
         hot_posts.sort(key=lambda x: x.comments.count(), reverse=True)
-        return {'hot_posts':hot_posts}
+        if current_user.is_authenticated:
+            message_count=Message.query.filter_by(user=current_user, is_read=False).count()
+        else:
+            message_count=None
+        return {'hot_posts':hot_posts,'message_count':message_count}
 
 
 def register_shell_context(app):
@@ -90,9 +94,9 @@ def register_commands(app):
     @app.cli.command()
     def forge():
         """Generate fake data."""
-        # db.drop_all()
-        # db.create_all()
-        fake_data()
+        #db.drop_all()
+        db.create_all()
+        #fake_data()
         click.echo('Done.')
 
 

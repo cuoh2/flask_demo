@@ -46,13 +46,14 @@ class User(UserMixin, db.Model):
                               foreign_keys=[Follow.followed_id], lazy='dynamic', cascade='all')
 
     role = db.relationship('Role',back_populates='users')
-    role_id = db.Column(db.Integer,db.ForeignKey('role.id'))
+    role_id = db.Column(db.Integer,db.ForeignKey('role.id'),default=3)
+
+    messages = db.relationship('Message',back_populates='user',cascade='all',lazy='dynamic')
 
     def __init__(self, **kwargs):
         super(User, self).__init__(**kwargs)
         self.generate_avatar()
         self.follow(self)
-        self.role_id = 3
 
     @property
     def password(self):
@@ -110,10 +111,10 @@ class User(UserMixin, db.Model):
 
     @property
     def is_admin(self):
-        return self.role.name == 'Administrator'
+        return self.role.id == 1 or self.role.id == 2
     @property
-    def is_moderator(self):
-        return self.role.name == 'Moderator'
+    def is_limited(self):
+        return self.role_id ==4
 
 
 class Role(db.Model):
@@ -206,4 +207,10 @@ class Collect(db.Model):
     post_id = db.Column(db.Integer, db.ForeignKey('post.id'), primary_key=True)
     time = db.Column(db.DateTime, default=datetime.now())
 
-
+class Message(db.Model):
+    id = db.Column(db.Integer,primary_key=True)
+    user = db.relationship('User',back_populates='messages')
+    user_id = db.Column(db.Integer,db.ForeignKey('user.id'))
+    content = db.Column(db.Text)
+    is_read = db.Column(db.Boolean,default=False)
+    time = db.Column(db.DateTime, default=datetime.now())

@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% from 'bootstrap/nav.html' import render_nav_item %}
-{% from 'bootstrap/pagination.html' import render_pager %}
+{#{% from 'bootstrap/pagination.html' import render_pager %}#}
+{% from 'macros.html' import pager with context %}
 
 {% block left_main %}
 <div class="card">
@@ -59,7 +60,7 @@
     </ul>
     <div class="card-footer">
         {% if posts %}
-                <div class="page-footer">{{ render_pager(pagination) }}</div>
+                <div class="page-footer">{{ pager(pagination) }}</div>
             {% endif %}
     </div>
 </div>
@@ -69,6 +70,5 @@
     {% if current_user.is_authenticated %}
     {% include 'right_user_card.html' %}
     {% endif %}
-    {% include 'star_node.html' %}
     {% include 'right_hot_post.html' %}
 {% endblock %}

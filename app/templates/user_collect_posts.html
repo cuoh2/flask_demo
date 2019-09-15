@@ -12,10 +12,9 @@
             <ul class="nav" id="post-type">
 
                 <li class="nav-item">
-                  <a href="{{ url_for('web.user',username=user.username,tag='all') }}"
-                       class="btn btn-{% if tag=='all' %}dark{% else %}light{% endif %} btn-sm"
-                       tabindex="-1" role="button" style="margin-right: 10px;
-                            {% if tag=='all' %}color: #ffffff !important;{% endif %}">我的收藏</a>
+                  <a href="#"
+                       class="btn btn-light btn-sm"
+                       tabindex="-1" role="button" style="margin-right: 10px;">我的收藏</a>
                  </li>
             </ul>
         </li>
@@ -47,9 +46,7 @@
             </div>
         </li>
         {% endfor %}
-         <div class="card-footer">
-             已无更多
-        </div>
+
     </ul>
     {% else %}
     <div class="card-footer">

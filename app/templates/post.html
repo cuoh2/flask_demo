@@ -45,7 +45,7 @@
             <p>{{ post.comments.count() }} 回复&nbsp |&nbsp 最后回复时间 {{ last_comment.publish_time }}</p>
         </li>
         {% for c in comments %}
-        <li class="list-group-item">
+        <li class="list-group-item" id="comments">
             <div class="row">
                 <div class="col-1"><a href="{{ url_for('web.user',username=c.author.username) }}"><img src="{{ url_for('web.get_avatar',filename=c.author.avatar_s) }}" height="48px" width="48px" class="rounded"></a></div>
                 <div class="col-10">

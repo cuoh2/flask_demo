@@ -13,7 +13,7 @@ from app import db, avatars
 from app.forms.main import EditProfileForm, UploadAvatarForm, CropAvatarForm
 from app.utils import redirect_back, is_allowed_type
 from . import web
-from app.models import User, Tag, Post, Collect, Comment
+from app.models import User, Tag, Post, Collect, Comment, Message
 from flask import render_template, request, url_for, redirect, flash, make_response, jsonify, current_app
 
 @web.route('/member/<username>')

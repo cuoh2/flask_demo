@@ -10,10 +10,11 @@ import re
 from sqlalchemy import func, or_
 
 #from app import socketio
+from app.decorators import limit_user
 from . import web
 from flask import render_template, request, url_for, redirect, flash, make_response, jsonify, send_from_directory, \
     current_app, Response
-from ..models import Tag, Post,User,Comment,Collect
+from ..models import Tag, Post, User, Comment, Collect, Message
 from .. import db#, cache
 from flask_login import login_required, current_user
 from datetime import datetime,date
@@ -47,7 +48,7 @@ def index():
         pagination = Post.query.filter_by(tag_id=t.id).join(Comment).group_by(Post.id).order_by(
               Post.publish_time.desc(),Comment.publish_time.desc()).paginate(page,per_page)
     posts = pagination.items
-    return render_template('index.html',tags=tags,tag=tag,posts=posts,pagination=pagination, user=current_user)
+    return render_template('index.html',tags=tags,tag=tag,posts=posts,pagination=pagination,user=current_user)
 
 def index_cookie(tag):
     resp = make_response(redirect(url_for('web.index',tag=tag)))
@@ -93,19 +94,32 @@ def post(id):
 
 @web.route('/p/<int:id>/reply',methods=['POST'])
 @login_required
+@limit_user
 def new_comment(id):
     post = Post.query.get_or_404(id)
     if request.method == 'POST':
         content = request.form.get('comment-content','')
         if not content:
             return redirect(url_for('web.post', id=post.id))
-        username = re.match('@\s(.*)\s',content)
+        username = re.match('@(.*)\s',content)
         if username:
             name = username.group(1)
             user = User.query.filter_by(username=name).first()
             if user:
                 content = content.replace(name,'<a href="/member/%s">%s</a>' %(name,name))
+                if user != current_user:
+                    message = Message(user_id=user.id,
+                                      content='<a href="{}">{}</a><a href="{}#comments">在评论里提到了你</a>'.format(
+                                          url_for('web.user', username=user.username),user.username,url_for(
+                                              'web.post',id=id)))
+                    db.session.add(message)
         comment = Comment(user_id=current_user.id,post_id=post.id,content=content_clean(content))
+        if current_user != post.author:
+            message = Message(user_id=post.author.id,
+                              content='<a href="{}">{}</a><a href="{}#comments">评论了你的帖子</a>'.format(
+                                  url_for('web.user', username=current_user.username), current_user.username,
+                                  url_for('web.post', id=id)))
+            db.session.add(message)
         db.session.add(comment)
         db.session.commit()
         return redirect(url_for('web.post',id=post.id))
@@ -113,6 +127,7 @@ def new_comment(id):
 @web.route('/new',methods=['GET','POST'])
 #@cache.cached(timeout=60*2)
 @login_required
+@limit_user
 def new_post():
     tags = Tag.query.all()
     hot_tags = sorted(tags,key=lambda x: x.posts.count(),reverse=True)[:3]
@@ -190,6 +205,21 @@ def edit_post(post_id):
         return jsonify({'result':'ok','post_id':post.id})
     return render_template('post_edit.html',tags=tags,hot_tags=hot_tags,post=post)
 
+@web.route('/<int:user_id>/message')
+@login_required
+def read_message(user_id):
+    messages = Message.query.filter_by(user_id=user_id).order_by(Message.time.desc()).all()
+    for message in messages:
+        message.is_read = True
+    db.session.commit()
+    return render_template('user_read_messages.html',messages=messages,user=current_user)
+
+
+@web.route('/message_count')
+@login_required
+def messages_count():
+    count=Message.query.filter_by(user=current_user, is_read=False).count()
+    return jsonify(count=count)
 #
 # online_users=[]
 # @socketio.on('connect')

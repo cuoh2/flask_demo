@@ -31,7 +31,7 @@ def is_safe_url(url):
            and test_url.netloc == ref_url.netloc
 
 
-def redirect_back(default='blog.index',**kwargs):
+def redirect_back(default='web.index',**kwargs):
     for target in request.args.get('next'),request.referrer:
         if not target:
             continue

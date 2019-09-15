@@ -30,3 +30,4 @@ csrf = CSRFProtect()
 
 login_manager.login_view = 'web.login'
 login_manager.login_message_category = 'warning'
+login_manager.login_message='请先登录'

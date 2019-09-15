@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
-{#{% import "bootstrap/wtf.html" as wtf %}#}
-{% from 'bootstrap/pagination.html' import render_pager %}
-{% from 'bootstrap/pagination.html' import render_pagination %}
+{#{% from 'bootstrap/pagination.html' import render_pager %}#}
+{#{% from 'bootstrap/pagination.html' import render_pagination %}#}
+{% from 'macros.html' import pager with context %}
+{% from 'macros.html' import render_pagination with context %}
 
 {% block title %}
 —— {{ user.username }}
@@ -9,13 +10,6 @@
 
 {% block left_main %}
 <div class="card" id="register-card">
-{#        <div class="col-2">#}
-{#            <img class="rounded" src="{{ url_for('web.get_avatar',filename=user.avatar_s) }}" width="80" height="80" />#}
-{#        </div>#}
-{#        <div class="col-10">#}
-{#            <p style="font-size: 24px;color: #000">{{ user.username }}</p>#}
-{#            <p style="color: #999">V2EX第{{ user.id }}号会员</p>#}
-{#        </div>#}
 
 
     <ul class="list-group list-group-flush">
@@ -81,7 +75,7 @@
         {% endfor %}
         <div class="card-footer">
         {% if posts %}
-{#                <div class="page-footer">{{ render_pager(pagination) }}</div>#}
+{#                <div class="page-footer">{{ pager(pagination) }}</div>#}
                             <div class="page-footer">{{ render_pagination(pagination) }}</div>
 
             {% endif %}

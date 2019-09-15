@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block left_main %}
+<div class="card" id="register-card">
+
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <ul class="nav" id="post-type">
+<li class="nav-item">
+                  <a href="#"
+                       class="btn btn-light btn-sm"
+                       tabindex="-1" role="button" style="margin-right: 10px;">我的消息</a>
+                 </li>
+            </ul>
+        </li>
+        <li class="list-group-item" id="node-nav">
+            <ul class="nav" id="node">
+
+            </ul>
+        </li>
+
+
+    {% if messages %}
+        {% for message in messages %}
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-10">
+                    <span class="post-title">{{ message.content|safe }}</span><br />
+                    <span class="post-info">
+                        &nbsp • &nbsp<script>document.write(moment("{{ message.time }}").fromNow());</script>
+
+                    </span>
+                </div>
+                <div class="col-1">
+                </div>
+                <div class="col-1"><span class="badge badge-pill badge-info">
+                    </span></div>
+            </div>
+        </li>
+        {% endfor %}
+
+    </ul>
+    {% else %}
+    <div class="card-footer">
+        暂无消息
+    </div>
+    {% endif %}
+
+</div>
+{% endblock %}
+
+{% block right_main %}
+     {% include 'right_user_card.html' %}
+{% endblock %}

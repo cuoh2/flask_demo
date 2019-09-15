@@ -35,7 +35,7 @@ def login():
         if user and user.verify_password(form.password.data):
             login_user(user)
             return redirect(request.args.get('next') or url_for('web.index'))
-        flash('用户名或密码错误','warning')
+        flash('密码错误','warning')
     return render_template('user_login.html',form=form)
 
 @web.route('/logout')

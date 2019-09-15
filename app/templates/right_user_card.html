@@ -59,20 +59,16 @@
 
         {% if current_user == user%}
 
-        <li class="list-group-item">
-            <div class="row">
-                <div class="col-6" style="padding-top: 6px;">
-                    <a href="#">2条未读提醒</a>
-                </div>
-                <div class="col-6">
-{#                    <p class="text-right">#}
-{#                        <a href="#" id="money"> 00#}
-{#                            <img src="{{ url_for('static',filename='img/silver@2x.png') }}" height="16" width="16" />#}
-{#                            00 <img src="{{ url_for('static',filename='img/bronze@2x.png') }}" height="16" width="16" />#}
-{#                        </a></p>#}
-                </div>
-            </div>
-        </li>
+                 <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-6" style="padding-top: 6px;" >
+                            <a href="{{ url_for('web.read_message',user_id=user.id) }}">
+                                <span id="message_box" data-href="{{ url_for('web.messages_count') }}">
+                                    {% if message_count >0 %}{{ message_count }}</span>条未读提醒 {% else %}我的消息 {% endif %}</a>
+                        </div>
+                    </div>
+                </li>
+
             <li class="list-group-item">
             <div class="row">
                 <div class="col-6" style="padding-top: 6px;">
@@ -131,3 +127,32 @@
     </ul>
 
 </div>
+<script type="text/javascript">
+        var csrf_token = "{{ csrf_token() }}";
+         {% if current_user.is_authenticated %}
+            var is_authenticated = true;
+        {% else %}
+            var is_authenticated = false;
+        {% endif %}
+
+        function update_messages_count(){
+            var $el = $('#message_box');
+            $.ajax({
+                type:'GET',
+                url:$el.data('href'),
+                success:function(res) {
+                    if(res.count){
+                        $el.html(res['count'])
+                    }
+
+                }
+            });
+        }
+
+        if(is_authenticated) {
+            setInterval(update_messages_count, 30000);
+        }
+
+    </script>
+
+</script>
