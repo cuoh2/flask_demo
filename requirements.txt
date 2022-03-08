@@ -16,7 +16,7 @@ cryptography==2.6.1
 cssselect==1.0.3
 Faker==1.0.7
 Flask==1.0.2
-httpie==1.0.2
+httpie==3.1.0
 hyperlink==19.0.0
 idna==2.8
 incremental==17.5.0
